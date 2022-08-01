@@ -1,5 +1,5 @@
-$mainColor: #1D71B8;
-$secondColor: #00A19A;
+$mainColor: #1d71b8;
+$secondColor: #00a19a;
 $gold: #ffd700;
 $white-color: #ffffff;
 $black-color: #292929;
@@ -205,6 +205,32 @@ span.select2.select2-container.select2-container--default {
 .fancybox__caption {
   text-align: center;
 }
+
+.customCursor {
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  transition: all 120ms ease-out;
+  position: fixed;
+  pointer-events: none;
+  left: 0;
+  top: 0;
+  transform: translate(calc(-50% + 15px), -50%);
+  z-index: 99999;
+  background-color: #00a19a20;
+}
+
+.customCursorHover {
+  width: 60px;
+  height: 60px;
+  box-shadow: 0px 0px 30px #00000010;
+}
+.customCursorClick {
+  width: 25px;
+  height: 25px;
+  background-color: #00a19a40;
+}
+
 /////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////
@@ -241,9 +267,9 @@ span.select2.select2-container.select2-container--default {
     }
   }
   .nav-link {
-    color: $mainColor;
+    color: $black-color;
     transition: $transition;
-    font-size: 12px;
+    font-size: 13px;
     position: relative;
     display: inline-flex;
     align-items: center;
@@ -252,8 +278,27 @@ span.select2.select2-container.select2-container--default {
     i {
       font-size: 14px;
     }
-    &:hover {
-      color: $mainColor !important;
+    &::before {
+      content: "";
+      width: 4px;
+      height: 4px;
+      background-color: $secondColor;
+      margin-left: 5px;
+      border-radius: 100px;
+      transition: $transition;
+      position: absolute;
+      right: -10px;
+      opacity: 0;
+      visibility: hidden;
+    }
+    &:hover,
+    &:focus {
+      color: $secondColor !important;
+      &::before {
+        right: 0px;
+        opacity: 1;
+        visibility: visible;
+      }
     }
   }
   .sideBtn {
@@ -356,21 +401,6 @@ span.select2.select2-container.select2-container--default {
           }
         }
       }
-      .language {
-        position: relative;
-        display: inline-flex;
-        align-items: center;
-        margin-right: 10px;
-        margin-left: 10px;
-        padding: 10px 4px;
-        color: #fff;
-        font-size: 12px;
-        line-height: 22px;
-        transition: color 0.3s;
-        a {
-          color: #fff;
-        }
-      }
     }
   }
 
@@ -414,7 +444,7 @@ span.select2.select2-container.select2-container--default {
       left: -50%;
       margin-top: 0;
       border: none;
-      text-align: center;
+      // text-align: center;
 
       a {
         border-radius: 2px;
@@ -423,24 +453,29 @@ span.select2.select2-container.select2-container--default {
         margin-bottom: 5px;
         position: relative;
         font-size: 12px;
-
+        display: flex;
+        align-items: center;
         &::before {
-          position: absolute;
-          right: 0;
-          top: 50%;
           content: "";
-          width: 0px;
-          height: 80%;
-          background-color: $mainColor;
-          border-bottom-left-radius: 50%;
-          border-top-left-radius: 50%;
-          transition: 0.1s ease-in-out;
-          transform: translateY(-50%);
+          width: 4px;
+          height: 4px;
+          background-color: $secondColor;
+          margin-left: 5px;
+          border-radius: 100px;
+          transition: $transition;
+          position: relative;
+          right: -10px;
+          opacity: 0;
+          visibility: hidden;
         }
-
-        &:hover {
+        &:hover,
+        &:focus {
+          color: $secondColor !important;
           &::before {
-            width: 5px;
+            right: 0px;
+            opacity: 1;
+            visibility: visible;
+            margin-left: 10px;
           }
         }
       }
@@ -523,8 +558,6 @@ span.select2.select2-container.select2-container--default {
     margin-bottom: 20px;
   }
 }
-
-
 
 .socialIcons {
   padding: 0;
@@ -716,7 +749,37 @@ span.select2.select2-container.select2-container--default {
   }
 }
 
+.mainContainer {
+  position: relative;
+  min-height: calc(100vh - 68px);
+  overflow: hidden;
+  &::before {
+    content: "";
+    height: 2000px;
+    width: 2000px;
+    border-radius: 2000px;
+    background-image: radial-gradient(  #00a19a , #00a19a00 )  ;
+    box-shadow: 0px 0px 500px #00a199c2;
+    z-index: 1;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateY(90%) translateX(-50%);
+  }
+  &::after {
+    content: "";
+    background-color: #00a19a30;
+    // backdrop-filter: blur(10px);
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
 
+
+}
 
 // //////////////////////////////////////////==================
 // //////////////////////////////////////////==================

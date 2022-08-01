@@ -71,8 +71,7 @@ $(document).ready(function () {
     minimumResultsForSearch: -1,
   });
 
-  Fancybox.bind("[data-fancybox]", {
-  });
+  Fancybox.bind("[data-fancybox]", {});
 
   // odometer
   $(".odometer").appear(function (e) {
@@ -88,5 +87,39 @@ $(document).ready(function () {
   );
   var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
     return new bootstrap.Tooltip(tooltipTriggerEl);
+  });
+});
+// /////////////////////////////
+// /////////////////////////////
+// /////////////////////////////
+// custom cursor
+var customCursor = document.querySelector(".customCursor");
+var a = document.querySelectorAll("a");
+
+document.addEventListener("mousemove", function (e) {
+  var x = e.clientX;
+  var y = e.clientY;
+  customCursor.style.transform = `translate3d(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%), 0)`;
+});
+
+document.addEventListener("mousemove", function (e) {
+  var x = e.clientX;
+  var y = e.clientY;
+
+});
+document.addEventListener("mousedown", function () {
+  customCursor.classList.add("customCursorClick");
+});
+
+document.addEventListener("mouseup", function () {
+  customCursor.classList.remove("customCursorClick");
+});
+
+a.forEach((item) => {
+  item.addEventListener("mouseover", () => {
+    customCursor.classList.add("customCursorHover");
+  });
+  item.addEventListener("mouseleave", () => {
+    customCursor.classList.remove("customCursorHover");
   });
 });
