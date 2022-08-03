@@ -23,13 +23,20 @@
     <link rel="stylesheet" href="css/jquery.fancybox.min.css" />
     <!-- odometer -->
     <link rel="stylesheet" href="css/odometer.min.css" />
-    
     <!-- Custom style  -->
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
+    <!-- custom cursor  -->
+    <div class="customCursor"></div>
+    <div class="customCursorInner"></div>
+    <!-- end custom cursor  -->
+    <!-- loader -->
+    <div class="loader"></div>
+    <!-- end loader -->
     <!-- ================ Header ================= -->
-    <!-- <header></header> -->
+    <header></header>
+
     <nav class="navbar navbar-expand-md fixed-top">
       <div class="container">
         <a class="navbar-brand" href="index.html">
@@ -139,25 +146,62 @@
         $(".sideMenu").toggleClass("active");
       });
     </script>
-    
-    <!-- custom cursor  -->
-    <div class="customCursor"></div>
-    <!-- end custom cursor  -->
+
 
     <!-- ================ /Header ================= -->
     <!--(((((((((((((((((((((((()))))))))))))))))))))))-->
     <!--((((((((((((((((((( content )))))))))))))))))))-->
     <!--(((((((((((((((((((((((()))))))))))))))))))))))-->
+    <!-- <span class="circleBlur"></span> -->
     <content>
-      <section class="mainContainer">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-6 p-2">
-        
-              
+      <section class="mainSlider swiperContainer">
+        <div id="particles-js"></div>
+        <div class="swiper mainSliderContainer">
+          <div class="swiper-wrapper">
+            <!-- swiper-slide -->
+            <div
+              class="swiper-slide mainSlideItem"
+              style="background-image: url(img/s1.jpg)"
+            >
+              <div class="info">
+                <h1 class="sliderTitle">نسمة أكيم</h1>
+                <p class="hint">
+                  اكبر مكتب للاستقدام في المملكة العربية السعودية
+                </p>
+              </div>
+            </div>
+            <!-- swiper-slide -->
+            <div
+              class="swiper-slide mainSlideItem"
+              style="background-image: url(img/s2.jpg)"
+            >
+              <div class="info">
+                <h1 class="sliderTitle">خدمات متميزة</h1>
+                <p class="hint">تعرف علي خدمتنا التي نقدمها لك</p>
+              </div>
+            </div>
+            <!-- swiper-slide -->
+            <div
+              class="swiper-slide mainSlideItem"
+              style="background-image: url(img/s3.jpg)"
+            >
+              <div class="info">
+                <h1 class="sliderTitle">سهولة الاستخدام</h1>
+                <p class="hint">
+                  ابدأ حجزك واتمم دفعك من خلال الموقع الالكتروني او التواصل معنا
+                  بوقت وجيز وبخطوات مختصرة
+                </p>
+              </div>
             </div>
           </div>
+          <!-- <div class="mainsliderPagination swiper-pagination"></div> -->
+          <div class="mainSliderNext swiper-button-next"></div>
+          <div class="mainsliderPrev swiper-button-prev"></div>
         </div>
+
+        <a href="#AboutUs" class="btn btn-white goDown bounce">
+          <i class="fa fa-angle-double-down "></i>
+        </a>
       </section>
     </content>
     <!--(((((((((((((((((((((((()))))))))))))))))))))))-->
@@ -182,6 +226,7 @@
     <script src="js/select2.min.js"></script>
     <script src="js/jquery.fancybox.min.js"></script>
     <script src="js/odometer.min.js"></script>
+    <script src="js/particles.js"></script>
     <script src="js/Custom.js"></script>
     <script>
       $("header").load("header.html");
