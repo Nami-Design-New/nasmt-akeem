@@ -171,17 +171,7 @@ span.select2.select2-container.select2-container--default {
     }
   }
   .swiper-button-next {
-    right: 40px;
-    @media (max-width: 1240px) {
-      right: 0px;
-    }
-    &::after {
-      content: "\f053" !important;
-      transform: scaleX(-1);
-    }
-  }
-  .swiper-button-prev {
-    left: 40px;
+    left: -60px;
     right: unset;
     @media (max-width: 1240px) {
       left: 0px;
@@ -190,7 +180,17 @@ span.select2.select2-container.select2-container--default {
       content: "\f053" !important;
     }
   }
-
+  .swiper-button-prev {
+    right: -60px;
+    left: unset;
+    @media (max-width: 1240px) {
+      right: 0px;
+    }
+    &::after {
+      content: "\f053" !important;
+      transform: scaleX(-1);
+    }
+  }
   .swiper-pagination {
     width: auto !important;
     left: 20px !important;
@@ -198,7 +198,6 @@ span.select2.select2-container.select2-container--default {
     border-radius: 4px;
     padding: 0px 10px;
     transition: $transition;
-
     .swiper-pagination-bullet {
       transition: $transition;
       width: 16px;
@@ -207,7 +206,6 @@ span.select2.select2-container.select2-container--default {
       background-color: $white-color;
       margin: 2px !important;
     }
-
     .swiper-pagination-bullet-active {
       background-color: $white-color;
       width: 40px;
@@ -233,7 +231,7 @@ span.select2.select2-container.select2-container--default {
     width: 45px;
     height: 45px;
     border-radius: 100%;
-    border: 1px solid #00a19a30;
+    border: 1px solid #44444430;
     transition: all 120ms ease-out;
     position: fixed;
     pointer-events: none;
@@ -246,7 +244,7 @@ span.select2.select2-container.select2-container--default {
     width: 10px;
     height: 10px;
     border-radius: 100%;
-    background-color: #00a19a90;
+    background-color: #44444490;
     position: fixed;
     transform: translate(-50%, -50%);
     pointer-events: none;
@@ -257,7 +255,7 @@ span.select2.select2-container.select2-container--default {
     width: 70px;
     height: 70px;
     border-color: transparent;
-    background-color: #00a19a30;
+    background-color: #44444430;
     box-shadow: 0px 0px 30px #00000010;
   }
   .customClick {
@@ -786,7 +784,6 @@ span.select2.select2-container.select2-container--default {
     }
   }
 }
-
 .circleBlur {
   display: block;
   width: 240px;
@@ -800,7 +797,6 @@ span.select2.select2-container.select2-container--default {
 }
 .mainSlider {
   position: relative;
-
   #particles-js {
     position: absolute;
     left: 0;
@@ -821,8 +817,7 @@ span.select2.select2-container.select2-container--default {
       justify-content: center;
       align-items: center;
       height: calc(100vh - 68px);
-
-      @media (max-width:768px) {
+      @media (max-width: 768px) {
         height: 550px;
       }
       &::after {
@@ -870,6 +865,24 @@ span.select2.select2-container.select2-container--default {
         }
       }
     }
+    .swiper-button-next,
+    .swiper-button-prev {
+      opacity: 0;
+      background-color: #ffffff30;
+      color: $white-color;
+    }
+    .swiper-button-next {
+      left: 40px;
+    }
+    .swiper-button-prev {
+      right: 40px;
+    }
+    &:hover {
+      .swiper-button-next,
+      .swiper-button-prev {
+        opacity: 1;
+      }
+    }
   }
 }
 .mainSlideItem.swiper-slide-active {
@@ -879,14 +892,12 @@ span.select2.select2-container.select2-container--default {
     animation-name: jackInTheBox !important;
     animation-delay: 0s;
   }
-
   .hint {
     animation-duration: 1s;
     animation-fill-mode: both;
     animation-name: fadeInUp !important;
     animation-delay: 1s;
   }
-
   .customBtn {
     animation-duration: 1s;
     animation-fill-mode: both;
@@ -894,7 +905,6 @@ span.select2.select2-container.select2-container--default {
     animation-delay: 1.5s;
   }
 }
-
 .goDown {
   width: 50px;
   height: 50px;
@@ -912,7 +922,6 @@ span.select2.select2-container.select2-container--default {
   bottom: calc(0% - 25px);
   left: calc(50% - 25px);
 }
-
 .customBtn {
   background-color: $mainColor;
   transition: $transition;
@@ -945,7 +954,6 @@ span.select2.select2-container.select2-container--default {
       transition: 1s all ease-in-out;
     }
   }
-
   &:hover {
     color: $white-color;
     span {
@@ -962,7 +970,108 @@ span.select2.select2-container.select2-container--default {
     }
   }
 }
+.SectionTitle {
+  text-align: center;
+  position: relative;
+  padding: 30px 10px;
+  &::before {
+    content: "";
+    width: 200px;
+    height: 2px;
+    background-color: $mainColor;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+  }
+  &::after {
+    content: "";
+    width: 15px;
+    height: 15px;
+    background-color: $gold;
+    border: 2px solid $mainColor;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  }
+  .hint {
+    color: #777;
+    margin: auto;
+    max-width: 800px;
+    line-height: 36px;
+  }
+  .title {
+    font-weight: bold;
+    color: $mainColor;
+    margin-bottom: 20px;
+  }
+}
+.services {
+  padding: 70px 0;
 
+  .service {
+    margin: 5px;
+    width: 100%;
+    height: 300px;
+    z-index: -1;
+    position: relative;
+    border-radius: 10px;
+    .serviceImg {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(#1d71b830, #1d72b8e7);
+        border-radius: 10px;
+      }
+    }
+    .details {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      z-index: 2;
+      width: 90%;
+      margin: 0 auto 20px;
+      transition: $transition;
+      transform: translateY(60px);
+      h4 {
+        color: #ffffff;
+        font-weight: bold;
+        font-size: 18px;
+      }
+      p {
+        color: #ededed;
+        margin: 12px 0 0;
+        font-size: 13px;
+        opacity: 0;
+        min-height: 52px;
+        transition: $transition;
+      }
+    }
+    &:hover {
+      .details {
+        transform: translateY(0px);
+        p {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
 // //////////////////////////////////////////==================
 // //////////////////////////////////////////==================
 // //////////////////////////////////////////==================

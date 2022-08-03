@@ -186,28 +186,29 @@ span.select2.select2-container.select2-container--default {
   }
 }
 .swiperContainer .swiper-button-next {
-  right: 40px;
+  left: -60px;
+  right: unset;
 }
 @media (max-width: 1240px) {
   .swiperContainer .swiper-button-next {
-    right: 0px;
+    left: 0px;
   }
 }
 .swiperContainer .swiper-button-next::after {
   content: "\f053" !important;
-  transform: scaleX(-1);
 }
 .swiperContainer .swiper-button-prev {
-  left: 40px;
-  right: unset;
+  right: -60px;
+  left: unset;
 }
 @media (max-width: 1240px) {
   .swiperContainer .swiper-button-prev {
-    left: 0px;
+    right: 0px;
   }
 }
 .swiperContainer .swiper-button-prev::after {
   content: "\f053" !important;
+  transform: scaleX(-1);
 }
 .swiperContainer .swiper-pagination {
   width: auto !important;
@@ -250,7 +251,7 @@ span.select2.select2-container.select2-container--default {
     width: 45px;
     height: 45px;
     border-radius: 100%;
-    border: 1px solid rgba(0, 161, 154, 0.1882352941);
+    border: 1px solid rgba(68, 68, 68, 0.1882352941);
     transition: all 120ms ease-out;
     position: fixed;
     pointer-events: none;
@@ -263,7 +264,7 @@ span.select2.select2-container.select2-container--default {
     width: 10px;
     height: 10px;
     border-radius: 100%;
-    background-color: rgba(0, 161, 154, 0.5647058824);
+    background-color: rgba(68, 68, 68, 0.5647058824);
     position: fixed;
     transform: translate(-50%, -50%);
     pointer-events: none;
@@ -274,7 +275,7 @@ span.select2.select2-container.select2-container--default {
     width: 70px;
     height: 70px;
     border-color: transparent;
-    background-color: rgba(0, 161, 154, 0.1882352941);
+    background-color: rgba(68, 68, 68, 0.1882352941);
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.062745098);
   }
   .customClick {
@@ -899,6 +900,22 @@ span.select2.select2-container.select2-container--default {
   margin-top: 20px;
   display: inline-block;
 }
+.mainSlider .mainSliderContainer .swiper-button-next,
+.mainSlider .mainSliderContainer .swiper-button-prev {
+  opacity: 0;
+  background-color: rgba(255, 255, 255, 0.1882352941);
+  color: #ffffff;
+}
+.mainSlider .mainSliderContainer .swiper-button-next {
+  left: 40px;
+}
+.mainSlider .mainSliderContainer .swiper-button-prev {
+  right: 40px;
+}
+.mainSlider .mainSliderContainer:hover .swiper-button-next,
+.mainSlider .mainSliderContainer:hover .swiper-button-prev {
+  opacity: 1;
+}
 
 .mainSlideItem.swiper-slide-active .sliderTitle {
   -webkit-animation-duration: 1s;
@@ -997,6 +1014,108 @@ span.select2.select2-container.select2-container--default {
   top: 0px;
   width: 400px;
   height: 400px;
+}
+
+.SectionTitle {
+  text-align: center;
+  position: relative;
+  padding: 30px 10px;
+}
+.SectionTitle::before {
+  content: "";
+  width: 200px;
+  height: 2px;
+  background-color: #1d71b8;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+}
+.SectionTitle::after {
+  content: "";
+  width: 15px;
+  height: 15px;
+  background-color: #ffd700;
+  border: 2px solid #1d71b8;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%) translateY(-50%) rotate(45deg);
+}
+.SectionTitle .hint {
+  color: #777;
+  margin: auto;
+  max-width: 800px;
+  line-height: 36px;
+}
+.SectionTitle .title {
+  font-weight: bold;
+  color: #1d71b8;
+  margin-bottom: 20px;
+}
+
+.services {
+  padding: 70px 0;
+}
+.services .service {
+  margin: 5px;
+  width: 100%;
+  height: 300px;
+  z-index: -1;
+  position: relative;
+  border-radius: 10px;
+}
+.services .service .serviceImg {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.services .service .serviceImg img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+}
+.services .service .serviceImg::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(29, 113, 184, 0.1882352941), rgba(29, 114, 184, 0.9058823529));
+  border-radius: 10px;
+}
+.services .service .details {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 2;
+  width: 90%;
+  margin: 0 auto 20px;
+  transition: all 0.3s ease-in-out;
+  transform: translateY(60px);
+}
+.services .service .details h4 {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 18px;
+}
+.services .service .details p {
+  color: #ededed;
+  margin: 12px 0 0;
+  font-size: 13px;
+  opacity: 0;
+  min-height: 52px;
+  transition: all 0.3s ease-in-out;
+}
+.services .service:hover .details {
+  transform: translateY(0px);
+}
+.services .service:hover .details p {
+  opacity: 1;
 }
 
 /* Tablet device :768px. */
