@@ -852,6 +852,11 @@ span.select2.select2-container.select2-container--default {
   align-items: center;
   height: calc(100vh - 68px);
 }
+@media (max-width: 768px) {
+  .mainSlider .mainSliderContainer .swiper-slide {
+    height: 550px;
+  }
+}
 .mainSlider .mainSliderContainer .swiper-slide::after {
   content: "";
   width: 100%;
