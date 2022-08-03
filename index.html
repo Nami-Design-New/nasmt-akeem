@@ -35,7 +35,116 @@
     <div class="loader"></div>
     <!-- end loader -->
     <!-- ================ Header ================= -->
-    <header></header>
+    <!-- <header></header> -->
+    <nav class="navbar navbar-expand-md fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img src="img/logo.svg" />
+        </a>
+        <!-- links in md media -->
+        <div class="d-none d-md-block">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html"> الرئيسية </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#services"> خدمتنا </a>
+            </li>
+            <!-- <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                خدمتنا
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#"> اصدار التأشيرة</a></li>
+                <li><a class="dropdown-item" href="#"> اختيار العمالة </a></li>
+                <li><a class="dropdown-item" href="#"> تعاقد الاستقدام </a></li>
+                <li><a class="dropdown-item" href="#"> مركز المساندة </a></li>
+              </ul>
+            </li> -->
+            <li class="nav-item">
+              <a class="nav-link" href="#!"> وصول العمالة </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#steps"> خطوات الاستقدام </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#!"> اتصل بنا </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#!"> حسابي </a>
+            </li>
+          </ul>
+        </div>
+        <!-- toggle btn -->
+        <div class="sideBtn d-md-none">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <!-- side menu -->
+        <div class="sideMenu">
+          <div class="sideMenuInner">
+            <a class="sideMenuLink" href="index.html"> الرئيسية </a>
+            <a class="sideMenuLink" href="index.html#services"> خدمتنا </a>
+            <!-- <div class="dropdown">
+              <a
+                class="sideMenuLink dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                خدمتنا
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#"> اصدار التأشيرة</a></li>
+                <li><a class="dropdown-item" href="#"> اختيار العمالة </a></li>
+                <li><a class="dropdown-item" href="#"> تعاقد الاستقدام </a></li>
+                <li><a class="dropdown-item" href="#"> مركز المساندة </a></li>
+              </ul>
+            </div> -->
+            <a class="sideMenuLink" href="#!"> وصول العمالة </a>
+            <a class="sideMenuLink" href="index.html#steps"> خطوات الاستقدام </a>
+            <a class="sideMenuLink" href="#!"> اتصل بنا </a>
+            <a class="sideMenuLink" href="#!"> حسابي </a>
+    
+            <ul class="sideMenuSocials">
+              <li>
+                <a href="#!">
+                  <i class="fa-brands fa-youtube"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#!">
+                  <i class="fa-brands fa-twitter"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#!">
+                  <i class="fa-brands fa-linkedin"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#!">
+                  <i class="fa-brands fa-facebook"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+   
+    
+
     <!-- ================ /Header ================= -->
     <!--(((((((((((((((((((((((()))))))))))))))))))))))-->
     <!--((((((((((((((((((( content )))))))))))))))))))-->
@@ -88,7 +197,7 @@
           <div class="mainSliderNext swiper-button-next"></div>
           <div class="mainsliderPrev swiper-button-prev"></div>
         </div>
-        <a href="#AboutUs" class="btn btn-white goDown bounce">
+        <a href="#services" class="btn btn-white goDown bounce">
           <i class="fa-duotone fa-chevrons-down"></i>
         </a>
       </section>
@@ -174,16 +283,78 @@
                     </div>
                   </div>
                 </div>
-             
               </div>
             </div>
-            <div class="servicesSlidePagination swiper-pagination d-md-none"></div>
+            <div
+              class="servicesSlidePagination swiper-pagination d-md-none"
+            ></div>
             <div class="servicesSliderNext swiper-button-next"></div>
             <div class="servicesSliderPrev swiper-button-prev"></div>
           </div>
         </div>
       </section>
       <!-- end services -->
+
+      <!-- start steps -->
+      <section class="steps" id="steps">
+        <div class="container">
+          <!-- Section Title -->
+          <div class="SectionTitle">
+            <h2 class="title">خطوات الاستقدام</h2>
+            <h6 class="hint">تعرف علي الخطوات التي نعمل بها ...</h6>
+          </div>
+          <!-- steps -->
+          <div class="allSteps">
+            <div class="step">
+              <div class="icon">
+                <i class="fa-thin fa-wallet"></i>
+              </div>
+              <p>
+                سداد رسوم تاشيرة العمالة المنزلية الخاصة بك عبر الخدمات الحكومية
+                في البنك او عن طريق القنوات التالية
+            
+                <div class="images">
+                  <img src="img/mc.webp">
+                  <img src="img/visa.webp">
+                  <img src="img/mada.webp">
+                </div>
+                
+              </p>
+            </div>
+            <div class="step">
+              <div class="icon">
+                <i class="fa-thin fa-passport"></i>
+              </div>
+              <p>طلب اصدار تاشيرة العمالة المنزلية الخاصة بك في برنامج مساند</p>
+            </div>
+            <div class="step">
+              <div class="icon">
+                <i class="fa-thin fa-id-card"></i>
+              </div>
+              <p>
+                اختيار السيرة الذاتية للعمالة المنزلية عبر البحث في برنامج مساند
+                عن طريق المهنة/ الجنسية
+              </p>
+            </div>
+            <div class="step">
+              <div class="icon">
+                <i class="fa-thin fa-wallet"></i>
+              </div>
+              <p>
+                دفع مبلغ اختياري وتوثيق طلب استقدام العمالة المنزلية المحددة بعد
+                اختيار السيرة الذاتية
+              </p>
+            </div>
+            <div class="step">
+              <div class="icon">
+                <i class="fa-thin fa-plane"></i>
+              </div>
+              <p>وصول العمالة المنزلية من المطار المحلي الى المكتب</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end steps -->
     </content>
     <!--(((((((((((((((((((((((()))))))))))))))))))))))-->
     <!--((((((((((((((((( / content )))))))))))))))))))-->
