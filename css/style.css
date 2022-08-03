@@ -211,8 +211,7 @@ span.select2.select2-container.select2-container--default {
 }
 .swiperContainer .swiper-pagination {
   width: auto !important;
-  right: 53% !important;
-  transform: translateX(50%);
+  left: 20px !important;
   background-color: rgba(19, 34, 53, 0);
   border-radius: 4px;
   padding: 0px 10px;

@@ -1,9 +1,9 @@
 $(document).ready(function () {
   // side menu
-  // $(".sideBtn").click(function () {
-  //   $(this).toggleClass("active");
-  //   $(".sideMenu").toggleClass("active");
-  // });
+  $(".sideBtn").click(function () {
+    $(this).toggleClass("active");
+    $(".sideMenu").toggleClass("active");
+  });
   //navbar ainmation
   // $(window).scroll(function () {
   //   var appScroll = $(document).scrollTop();
@@ -131,13 +131,10 @@ a.forEach((item) => {
 });
 
 
-
-// //
-// //
-// //
-
+// /////////////////////////////
+// /////////////////////////////
+// /////////////////////////////
 /* ---- particles.js config ---- */
-
 particlesJS("particles-js", {
   "particles": {
     "number": {
@@ -189,7 +186,7 @@ particlesJS("particles-js", {
       "enable": true,
       "distance": 150,
       "color": "#ffffff",
-      "opacity": 0.4,
+      "opacity": 0.2,
       "width": 1
     },
     "move": {
