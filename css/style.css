@@ -212,8 +212,9 @@ span.select2.select2-container.select2-container--default {
 }
 .swiperContainer .swiper-pagination {
   width: auto !important;
-  left: 20px !important;
-  background-color: rgba(19, 34, 53, 0);
+  left: 50% !important;
+  transform: translateX(-50%);
+  background-color: transparent;
   border-radius: 4px;
   padding: 0px 10px;
   transition: all 0.3s ease-in-out;
@@ -223,11 +224,11 @@ span.select2.select2-container.select2-container--default {
   width: 16px;
   border-radius: 4px;
   opacity: 0.3;
-  background-color: #ffffff;
+  background-color: #1d71b8;
   margin: 2px !important;
 }
 .swiperContainer .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #ffffff;
+  background-color: #1d71b8;
   width: 40px;
   opacity: 1;
   transition: all 0.3s ease-in-out;
@@ -916,6 +917,16 @@ span.select2.select2-container.select2-container--default {
 .mainSlider .mainSliderContainer:hover .swiper-button-prev {
   opacity: 1;
 }
+.mainSlider .mainSliderContainer .swiper-pagination {
+  left: 20px !important;
+  transform: translateX(0%);
+}
+.mainSlider .mainSliderContainer .swiper-pagination .swiper-pagination-bullet {
+  background-color: #ffffff;
+}
+.mainSlider .mainSliderContainer .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #ffffff;
+}
 
 .mainSlideItem.swiper-slide-active .sliderTitle {
   -webkit-animation-duration: 1s;
@@ -1055,7 +1066,10 @@ span.select2.select2-container.select2-container--default {
 }
 
 .services {
-  padding: 70px 0;
+  padding: 70px 0 30px;
+}
+.services .servicesSlider {
+  padding-bottom: 40px;
 }
 .services .service {
   margin: 5px;
@@ -1105,10 +1119,10 @@ span.select2.select2-container.select2-container--default {
 }
 .services .service .details p {
   color: #ededed;
-  margin: 12px 0 0;
+  margin: 10px 0 0;
   font-size: 13px;
   opacity: 0;
-  min-height: 52px;
+  min-height: 50px;
   transition: all 0.3s ease-in-out;
 }
 .services .service:hover .details {

@@ -43,6 +43,10 @@ $(document).ready(function () {
       nextEl: ".servicesSliderNext",
       prevEl: ".servicesSliderPrev",
     },
+    pagination: {
+      el: ".servicesSlidePagination",
+      clickable: true,
+    },
     speed: 500,
     autoplay: {
       delay: 2500,
