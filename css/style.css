@@ -400,7 +400,7 @@ span.select2.select2-container.select2-container--default {
   padding: 5px;
   cursor: pointer;
   transition: transform 0.3s;
-  z-index: 2;
+  z-index: 99999;
 }
 .navbar .sideBtn span {
   position: absolute;
@@ -447,7 +447,7 @@ span.select2.select2-container.select2-container--default {
 }
 .navbar .sideMenu {
   position: fixed;
-  z-index: 1;
+  z-index: 99998;
   right: -100%;
   top: 0;
   height: 100%;
@@ -1400,7 +1400,6 @@ span.select2.select2-container.select2-container--default {
 }
 .accordion .accordion-button {
   box-shadow: none !important;
-  border-radius: 8px;
 }
 .accordion ul {
   list-style: auto;
@@ -1418,7 +1417,6 @@ span.select2.select2-container.select2-container--default {
 .accordion .accordion-item {
   transition: all 0.3s ease-in-out;
   margin-bottom: 5px;
-  border-radius: 8px;
 }
 .accordion .accordion-item:nth-child(n+4) {
   display: none;
