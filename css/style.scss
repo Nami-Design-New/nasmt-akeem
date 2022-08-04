@@ -4,8 +4,8 @@ $gold: #ffd700;
 $white-color: #ffffff;
 $black-color: #292929;
 $transition: all 0.3s ease-in-out;
-$shadow: 0px 2px 4px #00000030;
-$BigShadow: 0px 8px 24px #00000030;
+$shadow: 0px 2px 4px #00000020;
+$BigShadow: 0px 8px 24px #00000020;
 @font-face {
   font-family: montserrat;
   font-display: swap;
@@ -34,7 +34,7 @@ $BigShadow: 0px 8px 24px #00000030;
   outline: none;
   border-radius: 20px !important;
 }
-:target{
+:target {
   scroll-margin-top: 60px;
 }
 a {
@@ -308,7 +308,7 @@ span.select2.select2-container.select2-container--default {
   border-top: 1px solid #ffffff33;
   border-bottom: 1px solid #ffffff33;
   box-shadow: none;
-  box-shadow: 0 0 30px 1.26px transparent;
+  box-shadow: $BigShadow;
   transition: $transition;
   position: sticky;
   top: 0;
@@ -577,7 +577,6 @@ span.select2.select2-container.select2-container--default {
     top: 0;
     transform: translateX(-50%);
     animation: sectionAnimation 2s infinite;
-
   }
   &::after {
     content: "";
@@ -589,19 +588,18 @@ span.select2.select2-container.select2-container--default {
     left: 50%;
     top: 0;
     transform: translateX(-50%) translateY(-50%) rotate(45deg);
-    
   }
   @keyframes sectionAnimation {
-    0%{
+    0% {
       width: 50px;
     }
-    50%{
+    50% {
       width: 200px;
     }
-    90%{
+    90% {
       width: 100px;
     }
-    100%{
+    100% {
       width: 50px;
     }
   }
@@ -806,16 +804,25 @@ span.select2.select2-container.select2-container--default {
     }
   }
 }
+.circleBlur2,
 .circleBlur {
   display: block;
-  width: 240px;
-  height: 240px;
+  width: 200px;
+  height: 200px;
   background: $secondColor;
   filter: blur(120px);
-  left: 0;
-  top: 50px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
   z-index: -1;
-  opacity: 0.8;
+  opacity: 0.9;
+}
+.circleBlur2 {
+  left: unset;
+  right: 0;
+  top: unset;
+  bottom: 0;
+  background-color: $mainColor;
 }
 .mainSlider {
   position: relative;
@@ -1112,7 +1119,7 @@ span.select2.select2-container.select2-container--default {
   padding: 70px 0 30px;
   .allSteps {
     display: flex;
-    padding: 20px 0px ;
+    padding: 20px 0px;
     // border-radius: 16px;
     text-align: center;
     position: relative;
@@ -1127,7 +1134,6 @@ span.select2.select2-container.select2-container--default {
       position: absolute;
       top: 50%;
       left: 0;
-
 
       @media (max-width: 678px) {
         display: none;
@@ -1151,7 +1157,7 @@ span.select2.select2-container.select2-container--default {
         width: 30px;
         height: 30px;
         border: 1px dashed $secondColor;
-        background-color: #00827c ;
+        background-color: #00827c;
         border-radius: 100px;
         position: absolute;
         bottom: 0;
@@ -1206,12 +1212,12 @@ span.select2.select2-container.select2-container--default {
           height: 45px;
         }
       }
-     
-      .images{
+
+      .images {
         display: flex;
         flex-wrap: wrap;
         margin-top: 10px;
-        img{
+        img {
           object-fit: contain;
           margin: 2px;
           height: 40px;
@@ -1220,14 +1226,14 @@ span.select2.select2-container.select2-container--default {
         }
       }
 
-      .icon{
+      .icon {
         position: relative;
         margin-bottom: 30px;
-        i{
+        i {
           font-size: 40px;
           color: $secondColor;
         }
-        &::after{
+        &::after {
           content: "";
           width: 80px;
           height: 50px;
@@ -1265,87 +1271,67 @@ span.select2.select2-container.select2-container--default {
   }
 }
 
-.scaleReverse{
+.scaleReverse {
   transform: scaleX(-1);
 }
-// //////////////////////////////////////////==================
-// //////////////////////////////////////////==================
-// //////////////////////////////////////////==================
-// //////////////////////////////////////////==================
-// //////////////////////////////////////////==================
-// //////////////////////////////////////////==================
-// //////////////////////////////////////////==================
-// //////////////////////////////////////////==================
-// //////////////////////////////////////////==================
-// //////////////////////////////////////////==================
-// //////////////////////////////////////////==================
-// //////////////////////////////////////////==================
-// //////////////////////////////////////////==================
-// //////////////////////////////////////////==================
-// //////////////////////////////////////////==================
-// //////////////////////////////////////////==================
-// //////////////////////////////////////////==================
-// //////////////////////////////////////////==================
-// //////////////////////////////////////////==================
-// //////////////////////////////////////////==================
-// //////////////////////////////////////////==================
-// //////////////////////////////////////////==================
-// //////////////////////////////////////////==================
-/* Tablet device :768px. */
-@media (min-width: 768px) and (max-width: 991px) {
-  /* Global */
-  body {
-    font-size: 14px !important;
+
+.statistics {
+  padding: 70px 0;
+  text-align: center;
+  position: relative;
+
+  .statisticsInner {
+    position: relative;
+    background-color: #ffffff30;
+    border-radius: 16px;
   }
-  h1 {
-    font-size: 26px !important;
-  }
-  h2 {
-    font-size: 22px !important;
-  }
-  h3 {
-    font-size: 20px !important;
-  }
+
   h4 {
-    font-size: 18px !important;
+    font-weight: bold;
+    color: $mainColor;
+    margin-bottom: 30px;
   }
-  h5 {
-    font-size: 16px !important;
-  }
-  h6 {
-    font-size: 15px !important;
-  }
-  a,
-  p {
-    font-size: 14px !important;
-  }
-}
-/* small mobile :320px. */
-@media (max-width: 767px) {
-  /* Global */
-  body {
-    font-size: 13px !important;
-  }
-  h1 {
-    font-size: 23px !important;
-  }
-  h2 {
-    font-size: 19px !important;
-  }
-  h3 {
-    font-size: 18px !important;
-  }
-  h4 {
-    font-size: 17px !important;
-  }
-  h5 {
-    font-size: 16px !important;
-  }
-  h6 {
-    font-size: 15px !important;
-  }
-  a,
-  p {
-    font-size: 14px !important;
+
+  .specifications {
+    padding: 30px;
+    // background-color: $white-color;
+    // box-shadow: $shadow;
+    border-radius: 16px;
+    height: 100%;
+    transition: $transition;
+
+    i {
+      font-size: 45px;
+      margin-bottom: 30px;
+      color: $mainColor;
+      transition: $transition;
+      display: block;
+    }
+
+    h1 {
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: $mainColor;
+      transition: $transition;
+      display: block;
+    }
+
+    .odometer-inside {
+      direction: ltr !important;
+    }
+
+
+    &:hover {
+      background-color: $white-color;
+      transform: translateY(-5px);
+
+      i {
+        color: $secondColor;
+      }
+
+      h1 {
+        color: $secondColor;
+      }
+    }
   }
 }
