@@ -1,25 +1,16 @@
 $(document).ready(function () {
+
   // side menu
   $(".sideBtn").click(function () {
     $(this).toggleClass("active");
     $(".sideMenu").toggleClass("active");
   });
+
   // show all
-  $('.showAll').on('click', function(event) {
+  $(".showAll").on("click", function (event) {
     // $(this).parent().siblings().removeClass('open');
-    $(this).parent().toggleClass('open');
-});
-  //navbar ainmation
-  // $(window).scroll(function () {
-  //   var appScroll = $(document).scrollTop();
-  //   if (appScroll > 2 && appScroll < 99999999999) {
-  //     $(".navbar").addClass("navAnimate");
-  //   }
-  //   if (appScroll > 0 && appScroll < 20) {
-  //     $(".navbar").removeClass("navAnimate");
-  //   }
-  // });
-  // topSlider
+    $(this).parent().toggleClass("open");
+  });
 
   //MainSlider
   var mainSlider = new Swiper(".mainSliderContainer", {
@@ -43,7 +34,7 @@ $(document).ready(function () {
   });
 
   // services slider
-  var swiper = new Swiper(".servicesSlider", {
+  var servicesSlider = new Swiper(".servicesSlider", {
     navigation: {
       nextEl: ".servicesSliderNext",
       prevEl: ".servicesSliderPrev",
@@ -71,10 +62,23 @@ $(document).ready(function () {
         slidesPerView: 4,
       },
     },
+  });
 
-    
-
-
+  //Categories Slider
+  var referencesSlider = new Swiper(".referencesSlider", {
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    centeredSlides: true,
+    loop: true,
+    slidesPerView: "auto",
+    spaceBetween: 5,
+    speed: 1000,
+    autoplay: {
+      delay: 1500,
+      disableOnInteraction: false,
+    },
   });
 });
 // ////////////////////////////////////////

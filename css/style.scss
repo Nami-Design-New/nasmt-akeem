@@ -1357,7 +1357,7 @@ span.select2.select2-container.select2-container--default {
     a {
       display: flex;
       align-items: center;
-      color: $secondColor;
+      color: $secondColor ;
       span {
         margin: 0 3px;
       }
@@ -1382,6 +1382,30 @@ span.select2.select2-container.select2-container--default {
       i {
         transform: rotate(180deg);
       }
+    }
+  }
+}
+
+.references {
+  padding-top: 40px;
+  background-image: linear-gradient(45deg, #1d71b830, #00a19a50),
+    url(../img/map.webp);
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  .swiper-slide {
+    width: auto;
+  }
+
+  .referenceLogo {
+    height: 150px;
+    padding: 10px 20px;
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
     }
   }
 }
