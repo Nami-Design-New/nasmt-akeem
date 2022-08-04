@@ -202,7 +202,6 @@ span.select2.select2-container.select2-container--default {
     border-radius: 4px;
     padding: 0px 10px;
     transition: $transition;
-
     .swiper-pagination-bullet {
       transition: $transition;
       width: 16px;
@@ -915,7 +914,6 @@ span.select2.select2-container.select2-container--default {
     .swiper-pagination {
       left: 20px !important;
       transform: translateX(0%);
-
       .swiper-pagination-bullet {
         background-color: $white-color;
       }
@@ -1114,7 +1112,6 @@ span.select2.select2-container.select2-container--default {
     }
   }
 }
-
 .steps {
   padding: 70px 0 30px;
   .allSteps {
@@ -1134,7 +1131,6 @@ span.select2.select2-container.select2-container--default {
       position: absolute;
       top: 50%;
       left: 0;
-
       @media (max-width: 678px) {
         display: none;
       }
@@ -1199,7 +1195,6 @@ span.select2.select2-container.select2-container--default {
         left: calc(50% + 1px);
         transform: translateX(-50%);
         z-index: 2;
-
         @media (max-width: 678px) {
           top: -15px;
           height: 60px;
@@ -1212,7 +1207,6 @@ span.select2.select2-container.select2-container--default {
           height: 45px;
         }
       }
-
       .images {
         display: flex;
         flex-wrap: wrap;
@@ -1225,7 +1219,6 @@ span.select2.select2-container.select2-container--default {
           border-radius: 8px;
         }
       }
-
       .icon {
         position: relative;
         margin-bottom: 30px;
@@ -1270,28 +1263,23 @@ span.select2.select2-container.select2-container--default {
     }
   }
 }
-
 .scaleReverse {
   transform: scaleX(-1);
 }
-
 .statistics {
   padding: 70px 0;
   text-align: center;
   position: relative;
-
   .statisticsInner {
     position: relative;
     background-color: #ffffff30;
     border-radius: 16px;
   }
-
   h4 {
     font-weight: bold;
     color: $mainColor;
     margin-bottom: 30px;
   }
-
   .specifications {
     padding: 30px;
     // background-color: $white-color;
@@ -1299,7 +1287,6 @@ span.select2.select2-container.select2-container--default {
     border-radius: 16px;
     height: 100%;
     transition: $transition;
-
     i {
       font-size: 45px;
       margin-bottom: 30px;
@@ -1307,7 +1294,6 @@ span.select2.select2-container.select2-container--default {
       transition: $transition;
       display: block;
     }
-
     h1 {
       font-weight: bold;
       margin-bottom: 20px;
@@ -1315,22 +1301,88 @@ span.select2.select2-container.select2-container--default {
       transition: $transition;
       display: block;
     }
-
     .odometer-inside {
       direction: ltr !important;
     }
-
-
     &:hover {
       background-color: $white-color;
       transform: translateY(-5px);
-
       i {
         color: $secondColor;
       }
-
       h1 {
         color: $secondColor;
+      }
+    }
+  }
+}
+.accordion {
+  .accordion-button:not(.collapsed) {
+    background-color: $secondColor;
+    color: $white-color;
+  }
+  .accordion-button {
+    box-shadow: none !important;
+    border-radius: 8px;
+
+  }
+  ul {
+    list-style: auto;
+    margin: 0;
+    li {
+      margin-bottom: 20px;
+      font-size: small;
+      color: #777;
+    }
+  }
+  p {
+    font-size: small;
+    color: #777;
+  }
+  .accordion-item {
+    transition: $transition;
+    margin-bottom: 5px;
+    border-radius: 8px;
+    &:nth-child(n + 4) {
+      display: none;
+    }
+  }
+  .showAll {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: $secondColor;
+    .less {
+      display: none;
+    }
+    a {
+      display: flex;
+      align-items: center;
+      color: $secondColor;
+      span {
+        margin: 0 3px;
+      }
+    }
+    i {
+      transition: $transition;
+    }
+  }
+  &.open {
+    .accordion-item {
+      &:nth-child(n + 4) {
+        display: block;
+      }
+    }
+    .showAll {
+      .less {
+        display: block;
+      }
+      .more {
+        display: none;
+      }
+      i {
+        transform: rotate(180deg);
       }
     }
   }

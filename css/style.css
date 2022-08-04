@@ -1392,4 +1392,67 @@ span.select2.select2-container.select2-container--default {
 }
 .statistics .specifications:hover h1 {
   color: #00a19a;
+}
+
+.accordion .accordion-button:not(.collapsed) {
+  background-color: #00a19a;
+  color: #ffffff;
+}
+.accordion .accordion-button {
+  box-shadow: none !important;
+  border-radius: 8px;
+}
+.accordion ul {
+  list-style: auto;
+  margin: 0;
+}
+.accordion ul li {
+  margin-bottom: 20px;
+  font-size: small;
+  color: #777;
+}
+.accordion p {
+  font-size: small;
+  color: #777;
+}
+.accordion .accordion-item {
+  transition: all 0.3s ease-in-out;
+  margin-bottom: 5px;
+  border-radius: 8px;
+}
+.accordion .accordion-item:nth-child(n+4) {
+  display: none;
+}
+.accordion .showAll {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  color: #00a19a;
+}
+.accordion .showAll .less {
+  display: none;
+}
+.accordion .showAll a {
+  display: flex;
+  align-items: center;
+  color: #00a19a;
+}
+.accordion .showAll a span {
+  margin: 0 3px;
+}
+.accordion .showAll i {
+  transition: all 0.3s ease-in-out;
+}
+.accordion.open .accordion-item:nth-child(n+4) {
+  display: block;
+}
+.accordion.open .showAll .less {
+  display: block;
+}
+.accordion.open .showAll .more {
+  display: none;
+}
+.accordion.open .showAll i {
+  transform: rotate(180deg);
 }/*# sourceMappingURL=style.css.map */

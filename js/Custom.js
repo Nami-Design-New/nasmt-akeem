@@ -4,6 +4,11 @@ $(document).ready(function () {
     $(this).toggleClass("active");
     $(".sideMenu").toggleClass("active");
   });
+  // show all
+  $('.showAll').on('click', function(event) {
+    // $(this).parent().siblings().removeClass('open');
+    $(this).parent().toggleClass('open');
+});
   //navbar ainmation
   // $(window).scroll(function () {
   //   var appScroll = $(document).scrollTop();
