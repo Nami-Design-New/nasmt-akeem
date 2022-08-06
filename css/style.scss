@@ -967,14 +967,18 @@ span.select2.select2-container.select2-container--default {
   border-radius: 8px;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   position: relative;
+  z-index: 1;
   overflow: hidden;
+  background-color: transparent;
   border: none;
   &::before {
     content: "";
     position: absolute;
-    right: 0;
-    top: 0;
+    right: 50%;
+    top: 50%;
+    transform: translateX(50%) translateY(-50%);
     width: 100%;
     height: 100%;
     background-color: $mainColor;
@@ -985,39 +989,36 @@ span.select2.select2-container.select2-container--default {
 
   span {
     position: absolute;
-    right: 0;
-    top: 0;
+    right: 50%;
+    top: 50%;
+    transform: translateX(50%) translateY(-50%);
     width: 0%;
     height: 0%;
     background-color: #00a19a90;
     z-index: -1;
     border-radius: 8px;
-    transition: 0.6s all ease-in-out;
-
+    transition: 0.3s all ease-in-out;
 
     &::after {
       content: "";
       position: absolute;
-      right: 0;
-      top: 0;
+      right: 50%;
+      top: 50%;
       width: 0%;
       height: 0%;
+      transform: translateX(50%) translateY(-50%);
       background-color: #00a19a;
       z-index: -2;
       border-radius: 8px;
-      transition: 1s all ease-in-out;
+      transition: 0.6s all ease-in-out;
     }
   }
   &:hover {
     color: $white-color;
     span {
-      right: -200px;
-      top: -200px;
       width: 400px;
       height: 400px;
       &::after {
-        right: 0px;
-        top: 0px;
         width: 400px;
         height: 400px;
       }
@@ -1283,7 +1284,7 @@ span.select2.select2-container.select2-container--default {
   transform: scaleX(-1);
 }
 .statistics {
-  background: linear-gradient(45deg ,#00a19a10 , #1d71b820 );
+  background: linear-gradient(45deg, #00a19a10, #1d71b820);
   padding: 70px 0;
   text-align: center;
   position: relative;
@@ -1333,10 +1334,9 @@ span.select2.select2-container.select2-container--default {
     }
   }
 }
-.faq{
+.faq {
   padding: 70px 0 20px;
-  background: linear-gradient(45deg ,#00a19a10 , #1d71b820 );
-
+  background: linear-gradient(45deg, #00a19a10, #1d71b820);
 }
 .accordion {
   .accordion-button:not(.collapsed) {
@@ -1345,7 +1345,6 @@ span.select2.select2-container.select2-container--default {
   }
   .accordion-button {
     box-shadow: none !important;
-
   }
   ul {
     list-style: auto;
@@ -1379,7 +1378,7 @@ span.select2.select2-container.select2-container--default {
     a {
       display: flex;
       align-items: center;
-      color: $secondColor ;
+      color: $secondColor;
       span {
         margin: 0 3px;
       }
@@ -1432,7 +1431,94 @@ span.select2.select2-container.select2-container--default {
   }
 }
 
-
+.contactForm {
+  padding: 70px 0;
+  .title{
+    margin-bottom: 30px;
+    color: $mainColor;
+    position: relative;
+    padding-right: 20px;
+    font-weight: bold;
+    &::before{
+      content: '';
+      width: 10px;
+      height: 100%;
+      background-color: $mainColor;
+      position: absolute;
+      right: 0;
+      top: 0;
+      border-radius: 50px;
+      border-top-left-radius: 100px;
+      border-bottom-left-radius: 100px;
+    }
+  }
+  form {
+    box-shadow: $shadow;
+    background-color: #ffffffa3;
+    padding: 20px;
+    border-radius: 16px;
+    position: relative;
+    // backdrop-filter: blur(4px);
+    .form-control {
+      background-color: transparent;
+      border-color: #1d71b847;
+    }
+    .form-label {
+      color: #555;
+      i {
+        color: $mainColor;
+      }
+    }
+  }
+  .googleMap {
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    border: none;
+    min-height: 250px;
+  }
+  .contactInfo {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .info {
+      background-color: $white-color;
+      margin: 8px 0;
+      padding: 20px;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      transition: $transition;
+      position: relative;
+      i {
+        min-width: 70px;
+        height: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+        border-radius: 100px;
+        border: 1px dashed $mainColor;
+        color: $mainColor;
+        transition: $transition;
+      }
+      h6 {
+        font-weight: bold;
+        color: #777;
+        margin-bottom: 8px;
+        font-size: small;
+      }
+      &:hover {
+        box-shadow: $BigShadow;
+        z-index: 2;
+        i {
+          background-color: #1d71b830;
+        }
+      }
+    }
+  }
+}
 
 // //////////////////////////////////////////==================
 // //////////////////////////////////////////==================
