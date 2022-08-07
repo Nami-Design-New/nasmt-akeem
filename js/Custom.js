@@ -1,5 +1,4 @@
 $(document).ready(function () {
-
   // side menu
   $(".sideBtn").click(function () {
     $(this).toggleClass("active");
@@ -80,6 +79,58 @@ $(document).ready(function () {
       disableOnInteraction: false,
     },
   });
+
+   // services slider
+   var cvSlider = new Swiper(".cvSlider", {
+    navigation: {
+      nextEl: ".cvSliderNext",
+      prevEl: ".cvSliderPrev",
+    },
+    pagination: {
+      el: ".cvSliderPagination",
+      clickable: true,
+    },
+    speed: 600,
+    autoplay: {
+      delay: 2000,
+      disableOnInteraction: false,
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+      },
+      576: {
+        slidesPerView: 2,
+      },
+      768: {
+        slidesPerView: 3,
+      },
+      1024: {
+        slidesPerView: 4,
+      },
+    },
+  });
+
+  // workerCvSlider
+  var workerCvSlider = new Swiper(".workerCvSlider", {
+    spaceBetween: 0,
+    centeredSlides: true,
+    loop: true,
+    speed: 1000,
+    pagination: {
+      el: ".workerCvSliderpagination",
+      clickable: true,
+    },
+    keyboard: {
+      enabled: true,
+    },
+    navigation: {
+      nextEl: ".workerCvSliderNext",
+      prevEl: ".workerCvSliderPrev",
+    },
+  });
+
+
 });
 // ////////////////////////////////////////
 // ////////////////////////////////////////
@@ -154,24 +205,24 @@ a.forEach((item) => {
   });
 });
 
-
-
 // validation
 (function () {
-  'use strict'
-  var forms = document.querySelectorAll('.needs-validation')
-  Array.prototype.slice.call(forms)
-    .forEach(function (form) {
-      form.addEventListener('submit', function (event) {
+  "use strict";
+  var forms = document.querySelectorAll(".needs-validation");
+  Array.prototype.slice.call(forms).forEach(function (form) {
+    form.addEventListener(
+      "submit",
+      function (event) {
         if (!form.checkValidity()) {
-          event.preventDefault()
-          event.stopPropagation()
+          event.preventDefault();
+          event.stopPropagation();
         }
-        form.classList.add('was-validated')
-      }, false)
-    })
-})()
-
+        form.classList.add("was-validated");
+      },
+      false
+    );
+  });
+})();
 
 // /////////////////////////////
 // /////////////////////////////
@@ -307,4 +358,3 @@ update = function () {
   requestAnimationFrame(update);
 };
 requestAnimationFrame(update);
-
