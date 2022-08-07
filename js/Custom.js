@@ -80,8 +80,8 @@ $(document).ready(function () {
     },
   });
 
-   // services slider
-   var cvSlider = new Swiper(".cvSlider", {
+  // services slider
+  var cvSlider = new Swiper(".cvSlider", {
     navigation: {
       nextEl: ".cvSliderNext",
       prevEl: ".cvSliderPrev",
@@ -92,7 +92,7 @@ $(document).ready(function () {
     },
     speed: 600,
     autoplay: {
-      delay: 2000,
+      delay: 3000,
       disableOnInteraction: false,
     },
     breakpoints: {
@@ -130,7 +130,14 @@ $(document).ready(function () {
     },
   });
 
-
+  // // wow delay
+  // function addWowDelay() {
+  //   $(" .services .wow , .statistics .wow , .steps .wow ").each(function (i) {
+  //     d = i * 0.1;
+  //     $(this).attr("data-wow-delay", d + "s");
+  //   });
+  // }
+  // addWowDelay();
 });
 // ////////////////////////////////////////
 // ////////////////////////////////////////

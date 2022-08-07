@@ -1678,6 +1678,17 @@ span.select2.select2-container.select2-container--default {
   top: 0;
   left: 0;
 }
+.workers .cv .type {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: auto;
+  background-color: #00a19a;
+  color: #ffffff;
+  padding: 4px 12px;
+  border-radius: 100px;
+  font-size: 12px !important;
+}
 .workers .cv .details {
   position: absolute;
   left: 0;
@@ -1769,6 +1780,104 @@ span.select2.select2-container.select2-container--default {
   background-color: #1d71b8;
   color: #00a19a;
   border: #1d71b8;
+}
+
+.family {
+  padding: 70px 0 50px;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(45deg, rgba(0, 161, 154, 0.062745098), rgba(29, 113, 184, 0.1254901961));
+}
+.family .single {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.family .single .image {
+  position: relative;
+  width: 50%;
+  margin-left: 40px;
+}
+.family .single .image img {
+  width: 100%;
+  height: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 16px;
+  position: relative;
+  z-index: 2;
+}
+.family .single .image::before {
+  content: "";
+  width: 90%;
+  height: 90%;
+  position: absolute;
+  right: -20px;
+  bottom: -20px;
+  z-index: 1;
+  border: 2px solid #ffd700;
+  background-color: rgba(255, 215, 0, 0.1882352941);
+  border-radius: 16px;
+}
+.family .single .info {
+  position: relative;
+  z-index: 2;
+}
+.family .single .info h3 {
+  font-weight: bold;
+  font-size: 35px !important;
+  margin-bottom: 20px;
+  color: #1d71b8;
+}
+.family .single .info h5 {
+  font-size: 25px !important;
+  color: #777;
+}
+.family .single:nth-child(even) {
+  flex-direction: row-reverse;
+}
+.family .single:nth-child(even) .image {
+  margin-left: 0px;
+  margin-right: 40px;
+}
+.family .single:nth-child(even) .image::before {
+  right: unset;
+  left: -20px;
+}
+.family .single:nth-child(even) .info {
+  text-align: end;
+}
+@media (max-width: 768px) {
+  .family .single {
+    flex-direction: column !important;
+  }
+  .family .single .image {
+    width: 100%;
+    margin: 0 !important;
+    margin-bottom: 20px !important;
+  }
+  .family .single .image img {
+    border-radius: 8px !important;
+    height: 200px;
+  }
+  .family .single .image::before {
+    width: 80px;
+    height: 80px;
+  }
+  .family .single .info {
+    margin-bottom: 40px;
+    text-align: center !important;
+  }
+  .family .single .info h3 {
+    font-size: 25px !important;
+    margin-bottom: 10px !important;
+  }
+  .family .single .info h5 {
+    font-size: 15px !important;
+  }
+  .family .single:last-child .info {
+    margin-bottom: 0;
+  }
 }
 
 /* Tablet device :768px. */
