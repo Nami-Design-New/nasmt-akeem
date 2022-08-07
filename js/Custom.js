@@ -1,9 +1,9 @@
 $(document).ready(function () {
-  // side menu
-  $(".sideBtn").click(function () {
-    $(this).toggleClass("active");
-    $(".sideMenu").toggleClass("active");
-  });
+  // // side menu
+  // $(".sideBtn").click(function () {
+  //   $(this).toggleClass("active");
+  //   $(".sideMenu").toggleClass("active");
+  // });
 
   // show all
   $(".showAll").on("click", function (event) {
