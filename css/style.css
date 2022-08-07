@@ -931,15 +931,26 @@ span.select2.select2-container.select2-container--default {
   text-transform: capitalize;
   text-shadow: 3px 2px 3px rgba(0, 0, 0, 0.2509803922);
   margin-bottom: 10px;
+  font-size: 20px !important;
+}
+@media (max-width: 768px) {
+  .mainSlider .mainSliderContainer .swiper-slide .info .hint {
+    font-size: 16px !important;
+  }
 }
 .mainSlider .mainSliderContainer .swiper-slide .info .sliderTitle {
-  font-size: 50px;
+  font-size: 50px !important;
   overflow: hidden;
   color: #ffffff;
   font-weight: bolder;
   text-transform: uppercase;
   text-shadow: 3px 2px 3px rgba(0, 0, 0, 0.2509803922);
   margin-bottom: 20px;
+}
+@media (max-width: 768px) {
+  .mainSlider .mainSliderContainer .swiper-slide .info .sliderTitle {
+    font-size: 30px !important;
+  }
 }
 .mainSlider .mainSliderContainer .swiper-slide .info a {
   margin-top: 20px;
@@ -1930,7 +1941,7 @@ span.select2.select2-container.select2-container--default {
 .customOrder {
   padding: 10px 20px;
   border-radius: 8px;
-  background-color: #CDEBEA;
+  background-color: #cdebea;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1953,6 +1964,187 @@ span.select2.select2-container.select2-container--default {
   }
 }
 
+.recruitmentRequest {
+  padding: 50px 0;
+}
+.recruitmentRequest .headTitle h2 {
+  font-size: 30px !important;
+}
+@media (max-width: 768px) {
+  .recruitmentRequest .headTitle h2 {
+    font-size: 20px !important;
+  }
+}
+.recruitmentRequest .headTitle p {
+  color: #777;
+}
+.recruitmentRequest .formCard {
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1254901961);
+  border-radius: 4px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 90px;
+  left: 0;
+}
+.recruitmentRequest .formCard .head {
+  background-color: rgba(0, 161, 154, 0.1882352941);
+  padding: 10px 20px;
+  color: #00a19a;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+.recruitmentRequest .formCard .select2-container--default .select2-selection--single {
+  border-color: #ced4da;
+}
+.recruitmentRequest .hint {
+  color: #777;
+  font-size: 10px;
+}
+.recruitmentRequest .hint a {
+  font-weight: bold;
+  color: #1d71b8;
+  font-size: 10px !important;
+}
+.recruitmentRequest .form-check-label {
+  font-size: small;
+}
+
+.form-check-input:checked {
+  background-color: #00a19a;
+  border-color: #00a19a;
+  transition: all 0.3s ease-in-out;
+}
+.form-check-input:focus {
+  box-shadow: 0 0 0 0.25rem rgba(20, 94, 78, 0.1882352941);
+}
+
+.selectCustomerService {
+  padding: 70px 0;
+}
+.selectCustomerService .headTitle h2 {
+  font-size: 30px !important;
+}
+@media (max-width: 768px) {
+  .selectCustomerService .headTitle h2 {
+    font-size: 20px !important;
+  }
+}
+.selectCustomerService .headTitle p {
+  color: #777;
+}
+.selectCustomerService .choose {
+  position: relative;
+  background-color: rgba(0, 161, 154, 0.1254901961);
+  padding: 20px;
+  border-radius: 16px;
+}
+.selectCustomerService .choose .customerOption {
+  padding: 5px;
+}
+.selectCustomerService .choose .btn {
+  padding: 15px 20px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1254901961);
+  box-shadow: none;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  border: 4px solid transparent;
+  border-radius: 16px;
+}
+.selectCustomerService .choose .btn img {
+  height: 80px;
+  min-width: 80px;
+  margin: 0 auto 20px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.selectCustomerService .choose .btn span {
+  text-transform: capitalize;
+}
+.selectCustomerService .choose .btn-check:active + .btn-outline,
+.selectCustomerService .choose .btn-check:checked + .btn-outline,
+.selectCustomerService .choose .btn-outline.active,
+.selectCustomerService .choose .btn-outline.dropdown-toggle.show,
+.selectCustomerService .choose .btn-outline:active {
+  background-color: #ffffff;
+  color: #00a19a;
+  border: 4px solid #00a19a;
+}
+.selectCustomerService .choose .btn-check:active + .btn-outline::after,
+.selectCustomerService .choose .btn-check:checked + .btn-outline::after,
+.selectCustomerService .choose .btn-outline.active::after,
+.selectCustomerService .choose .btn-outline.dropdown-toggle.show::after,
+.selectCustomerService .choose .btn-outline:active::after {
+  content: "\f336" !important;
+  font-family: "Font Awesome 6 Pro";
+  font-weight: bold;
+  position: absolute;
+  font-size: 20px;
+  top: 5px;
+  right: 10px;
+}
+
+.selectedCustomerInfo .contact {
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1254901961);
+  height: 100%;
+  text-align: center;
+  color: #292929;
+}
+.selectedCustomerInfo .contact i {
+  font-size: 35px;
+  display: block;
+}
+.selectedCustomerInfo .contact i.fa-whatsapp-square {
+  color: #038735;
+}
+.selectedCustomerInfo .contact i.fa-square-phone {
+  color: #1e90ff;
+}
+.selectedCustomerInfo .contact:hover {
+  background-color: rgba(0, 161, 154, 0.1254901961);
+  color: #00a19a;
+}
+
+/* PC device :991px. */
+@media (min-width: 991px) {
+  body {
+    font-size: 14px !important;
+  }
+  h1 {
+    font-size: 26px !important;
+  }
+  h2 {
+    font-size: 24px !important;
+  }
+  h3 {
+    font-size: 20px !important;
+  }
+  h4 {
+    font-size: 18px !important;
+  }
+  h5 {
+    font-size: 16px !important;
+  }
+  h6 {
+    font-size: 15px !important;
+  }
+  a,
+p {
+    font-size: 14px !important;
+  }
+}
 /* Tablet device :768px. */
 @media (min-width: 768px) and (max-width: 991px) {
   /* Global */

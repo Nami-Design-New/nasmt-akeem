@@ -115,7 +115,7 @@ $(document).ready(function () {
   var workerCvSlider = new Swiper(".workerCvSlider", {
     spaceBetween: 0,
     centeredSlides: true,
-    loop: true,
+    // loop: true,
     speed: 1000,
     pagination: {
       el: ".workerCvSliderpagination",
@@ -130,14 +130,14 @@ $(document).ready(function () {
     },
   });
 
-  // wow delay
-  function addWowDelay() {
-    $(" .statistics .wow , .steps .wow ").each(function (i) {
-      d = i * 0.10;
-      $(this).attr("data-wow-delay", d + "s");
-    });
-  }
-  addWowDelay();
+  // // wow delay
+  // function addWowDelay() {
+  //   $(" .statistics .wow , .steps .wow ").each(function (i) {
+  //     d = i * 0.10;
+  //     $(this).attr("data-wow-delay", d + "s");
+  //   });
+  // }
+  // addWowDelay();
 });
 // ////////////////////////////////////////
 // ////////////////////////////////////////
