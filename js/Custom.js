@@ -130,14 +130,14 @@ $(document).ready(function () {
     },
   });
 
-  // // wow delay
-  // function addWowDelay() {
-  //   $(" .services .wow , .statistics .wow , .steps .wow ").each(function (i) {
-  //     d = i * 0.1;
-  //     $(this).attr("data-wow-delay", d + "s");
-  //   });
-  // }
-  // addWowDelay();
+  // wow delay
+  function addWowDelay() {
+    $(" .statistics .wow , .steps .wow ").each(function (i) {
+      d = i * 0.10;
+      $(this).attr("data-wow-delay", d + "s");
+    });
+  }
+  addWowDelay();
 });
 // ////////////////////////////////////////
 // ////////////////////////////////////////
