@@ -1833,18 +1833,18 @@ span.select2.select2-container.select2-container--default {
   font-size: 25px !important;
   color: #777;
 }
-.family .single:nth-child(even) {
+.family .single:nth-child(odd) {
   flex-direction: row-reverse;
 }
-.family .single:nth-child(even) .image {
+.family .single:nth-child(odd) .image {
   margin-left: 0px;
   margin-right: 40px;
 }
-.family .single:nth-child(even) .image::before {
+.family .single:nth-child(odd) .image::before {
   right: unset;
   left: -20px;
 }
-.family .single:nth-child(even) .info {
+.family .single:nth-child(odd) .info {
   text-align: end;
 }
 @media (max-width: 768px) {
