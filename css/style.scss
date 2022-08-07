@@ -1840,7 +1840,6 @@ span.select2.select2-container.select2-container--default {
   padding: 50px 0;
   position: relative;
 }
-
 .customOrder {
   padding: 10px 20px;
   border-radius: 8px;
@@ -1855,34 +1854,27 @@ span.select2.select2-container.select2-container--default {
   margin-bottom: 30px;
   border-top: 2px solid $mainColor;
   text-align: center;
-
   @media (max-width: 768px) {
     align-items: center;
     justify-content: center;
-
     a {
       margin-top: 10px;
     }
   }
 }
-
 .recruitmentRequest {
   padding: 50px 0;
-
   .headTitle {
     h2 {
       font-size: 30px !important;
-
       @media (max-width: 768px) {
         font-size: 20px !important;
       }
     }
-
     p {
       color: #777;
     }
   }
-
   .formCard {
     background-color: #fff;
     padding: 20px;
@@ -1891,7 +1883,6 @@ span.select2.select2-container.select2-container--default {
     position: sticky;
     top: 90px;
     left: 0;
-
     .head {
       background-color: #00a19a30;
       padding: 10px 20px;
@@ -1900,68 +1891,55 @@ span.select2.select2-container.select2-container--default {
       border-radius: 4px;
       font-weight: bold;
     }
-
     .select2-container--default .select2-selection--single {
       border-color: #ced4da;
     }
   }
-
   .hint {
     color: #777;
     font-size: 10px;
-
     a {
       font-weight: bold;
       color: $mainColor;
       font-size: 10px !important;
     }
   }
-
   .form-check-label {
     font-size: small;
   }
 }
-
 .form-check-input {
   &:checked {
     background-color: $secondColor;
     border-color: $secondColor;
     transition: $transition;
   }
-
   &:focus {
     box-shadow: 0 0 0 0.25rem #145e4e30;
   }
 }
-
 .selectCustomerService {
   padding: 70px 0;
-
   .headTitle {
     h2 {
       font-size: 30px !important;
-
       @media (max-width: 768px) {
         font-size: 20px !important;
       }
     }
-
     p {
       color: #777;
     }
   }
-
   .choose {
     position: relative;
     background-color: #00a19a20;
     padding: 20px;
     border-radius: 16px;
-
     .customerOption {
       // margin: 5px;
       padding: 5px;
     }
-
     .btn {
       padding: 15px 20px;
       // border: 1px solid #d2d6da;
@@ -1975,19 +1953,16 @@ span.select2.select2-container.select2-container--default {
       transition: $transition;
       border: 4px solid transparent;
       border-radius: 16px;
-
       img {
         height: 80px;
         min-width: 80px;
         margin: 0 auto 20px;
         object-fit: contain;
       }
-
       span {
         text-transform: capitalize;
       }
     }
-
     .btn-check:active + .btn-outline,
     .btn-check:checked + .btn-outline,
     .btn-outline.active,
@@ -1996,7 +1971,6 @@ span.select2.select2-container.select2-container--default {
       background-color: $white-color;
       color: $secondColor;
       border: 4px solid $secondColor;
-
       &::after {
         content: "\f336" !important;
         font-family: "Font Awesome 6 Pro";
@@ -2009,11 +1983,9 @@ span.select2.select2-container.select2-container--default {
     }
   }
 }
-
 .selectedCustomerInfo {
-
   .contact {
-    padding:  20px;
+    padding: 20px;
     background-color: $white-color;
     border-radius: 8px;
     display: flex;
@@ -2024,21 +1996,17 @@ span.select2.select2-container.select2-container--default {
     height: 100%;
     text-align: center;
     color: $black-color;
-
     i {
       font-size: 35px;
       display: block;
       // margin-bottom: 10px;
-
       &.fa-whatsapp-square {
         color: #038735;
       }
-
       &.fa-square-phone {
         color: #1e90ff;
       }
     }
-
     &:hover {
       background-color: #00a19a20;
       color: $secondColor;
@@ -2048,9 +2016,101 @@ span.select2.select2-container.select2-container--default {
     }
   }
 }
+.account {
+  padding: 70px 10px;
+  .formCard {
+    max-width: 900px;
+    margin: auto;
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: $BigShadow;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    background-color: $white-color;
+    @media (max-width: 768px) {
+      padding: 30px 10px;
+    }
+    .loginImg {
+      height: 300px;
+      width: 100%;
+      object-fit: contain;
+      // margin: 20px 0 50px;
+      @media (max-width: 768px) {
+        padding: 0 30px;
+      }
+    }
+    a {
+      color: $secondColor;
+    }
+  }
+  .socialLogin {
+    text-align: center;
+    .line {
+      padding: 10px 20px;
+      margin: auto;
+      position: relative;
+      span {
+        background-color: #fff;
+        z-index: 2;
+        position: relative;
+        padding: 0px 20px;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 50%;
+        width: 100%;
+        height: 2px;
+        background-color: #666;
+        border-radius: 10px;
+      }
+    }
+    .social {
+      display: flex;
+      padding: 10px 0;
+      margin-bottom: 10px;
+      .loginIcon {
+        padding: 10px 16px;
+        margin: 0px 5px;
+        width: 100%;
+        border-radius: 4px;
+        color: #fff;
+        text-transform: capitalize;
+        &.facebook {
+          background-color: #4267b2;
+        }
+        &.gmail {
+          background-color: #db4437;
+        }
+        &:hover {
+          transform: translateY(-2px);
+          box-shadow: 0px 10px 20px #00000030;
+        }
+      }
+    }
+  }
+}
+.vCode {
+  direction: ltr;
+  // border-bottom: 2px dashed #eee;
+  padding: 20px 0px ;
+  display: flex;
+  justify-content: space-around;
 
-
-
+  .vCode-input {
+      min-width: 40px;
+      width: 100%;
+      height: 60px;
+      background-color: #eee;
+      border: none;
+      border-bottom: 2px solid $secondColor;
+      text-align: center;
+      font-size: 18px;
+      border-radius: 4px 4px 0 0;
+  }
+}
 
 // //////////////////////////////////////////==================
 // //////////////////////////////////////////==================
