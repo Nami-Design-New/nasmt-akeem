@@ -297,8 +297,8 @@ span.select2.select2-container.select2-container--default {
   height: 5px;
   background-color: #1d71b8;
   transition: all 0.3s ease-in-out;
-  -webkit-animation: loding 3s;
-          animation: loding 3s;
+  -webkit-animation: loding 2s;
+          animation: loding 2s;
 }
 @-webkit-keyframes loding {
   0% {
@@ -2215,6 +2215,481 @@ span.select2.select2-container.select2-container--default {
   text-align: center;
   font-size: 18px;
   border-radius: 4px 4px 0 0;
+}
+
+.profile .NavBack {
+  background-image: linear-gradient(45deg, rgba(19, 34, 53, 0.5647058824), rgba(236, 207, 168, 0.5647058824)), url(../img/map.webp);
+  background-size: cover;
+  background-attachment: fixed;
+  height: 120px;
+  margin-bottom: 50px;
+}
+.profile .userHeader {
+  margin: 20px 0px;
+  background-color: #ffffff;
+  color: #1d71b8;
+  border-radius: 20px;
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1254901961);
+  padding: 20px;
+  position: relative;
+}
+@media (max-width: 768px) {
+  .profile .userHeader {
+    padding: 10px;
+  }
+}
+.profile .userHeader .userInfo {
+  position: relative;
+  margin: 0px 10px;
+}
+.profile .userHeader .userInfo img {
+  width: 100px;
+  height: 100px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+  border-radius: 100%;
+  border: 3px solid #00a19a;
+}
+.profile .userHeader .userInfo .userName h3 {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.profile .userHeader .userInfo .control {
+  position: absolute;
+  left: 0;
+  top: 5px;
+}
+.profile .userHeader .userInfo .control i {
+  font-size: 28px;
+  color: #ff0000;
+  cursor: pointer;
+}
+.profile .userHeader .userInfo .control .switch {
+  position: relative;
+  width: 50px;
+  height: 28px;
+  margin: -3px 10px;
+}
+.profile .userHeader .userInfo .control .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.profile .userHeader .userInfo .control .switch .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+  margin: 0px !important;
+}
+.profile .userHeader .userInfo .control .switch .slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  right: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+.profile .userHeader .userInfo .control .switch input:checked + .slider {
+  background-color: #2196f3;
+}
+.profile .userHeader .userInfo .control .switch input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+.profile .userHeader .userInfo .control .switch input:checked + .slider:before {
+  transform: translateX(22px);
+}
+@media (max-width: 760px) {
+  .profile .userHeader .container {
+    padding: 0px !important;
+  }
+  .profile .userHeader .userInfo {
+    padding: 20px 10px;
+  }
+  .profile .userHeader .userInfo img {
+    width: 80px;
+    height: 80px;
+  }
+  .profile .userHeader .userInfo span {
+    margin: 0px 10px;
+  }
+}
+.profile .profileNavCol {
+  background-color: rgba(0, 161, 154, 0.1254901961);
+  border-radius: 8px;
+  padding: 5px;
+  margin-bottom: 50px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 90px;
+  right: 0;
+  z-index: 2;
+}
+.profile .profileNavCol a {
+  padding: 13px;
+  display: flex;
+  align-items: center;
+  color: #00a19a;
+  margin: 5px 1px;
+  transition: all 0.3s ease-in-out;
+  border-radius: 4px;
+}
+.profile .profileNavCol a i {
+  margin-right: 5px;
+}
+.profile .profileNavCol a.active, .profile .profileNavCol a:hover {
+  background-color: #00a19a;
+  color: #ffffff;
+}
+@media (max-width: 760px) {
+  .profile .profileNavCol {
+    margin-bottom: 10px;
+  }
+  .profile .profileNavCol a {
+    padding: 8px 10px;
+    display: inline-flex;
+    margin: 3px 0px;
+    min-width: 49%;
+    background-color: rgba(255, 255, 255, 0.6431372549);
+  }
+}
+@media (max-width: 335px) {
+  .profile .profileNavCol {
+    margin-bottom: 10px;
+  }
+  .profile .profileNavCol a {
+    padding: 8px 10px;
+    display: inline-flex;
+    margin: 3px 0px;
+    min-width: 100%;
+  }
+}
+.profile .profileTitle {
+  background-color: #f8f8f8;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.profileContent .newOrder {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  border: 1px solid #1d71b8;
+  background: rgba(29, 113, 184, 0.1882352941);
+  color: #1d71b8;
+}
+.profileContent .newOrder i {
+  font-size: 30px;
+  margin-left: 20px;
+}
+.profileContent .newOrder:hover {
+  background: #1d71b8;
+  color: #ffffff;
+}
+.profileContent .order {
+  background-color: #fff;
+  border: 1px solid rgba(0, 161, 154, 0.1254901961);
+  border-radius: 16px;
+}
+.profileContent .order .workerCvSlider {
+  padding-bottom: 0px;
+}
+.profileContent .order .workerCvSlider img {
+  height: 200px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 100%;
+  cursor: zoom-in;
+}
+.profileContent .order .swiper-button-prev,
+.profileContent .order .swiper-button-next {
+  color: #1d71b8;
+  width: 30px;
+  height: 30px;
+}
+.profileContent .order .swiper-button-prev:hover,
+.profileContent .order .swiper-button-next:hover {
+  background-color: #00a19a;
+  color: #1d71b8;
+}
+.profileContent .order .swiper-button-prev::after, .profileContent .order .swiper-button-prev::before,
+.profileContent .order .swiper-button-next::after,
+.profileContent .order .swiper-button-next::before {
+  font-weight: 300;
+  font-size: 20px;
+}
+.profileContent .order ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.profileContent .order ul li {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  min-width: 49%;
+  padding: 10px;
+}
+.profileContent .order ul li h6 {
+  color: #777;
+}
+.profileContent .order ul li p {
+  font-weight: bold;
+  margin-right: 5px;
+}
+.profileContent .order .profileCustomerInfo {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 15px 5px 10px;
+  background-color: rgba(0, 161, 154, 0.1254901961);
+  border-radius: 16px;
+  margin-top: 10px;
+}
+.profileContent .order .profileCustomerInfo .info {
+  display: flex;
+  align-items: center;
+}
+.profileContent .order .profileCustomerInfo .info img {
+  height: 40px;
+  width: 40px;
+  margin-left: 20px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.profileContent .order .profileCustomerInfo .info .text h6 {
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #00a19a;
+}
+.profileContent .order .profileCustomerInfo .info .text p {
+  font-size: smaller !important;
+}
+.profileContent .order .profileCustomerInfo .contact {
+  text-align: center;
+}
+.profileContent .order .profileCustomerInfo .contact a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  border-radius: 100px;
+  border: 1px solid #00a19a;
+  color: #00a19a;
+  margin: 5px;
+}
+.profileContent .order .profileCustomerInfo .contact a i {
+  font-size: 20px;
+}
+.profileContent .order .profileCustomerInfo .contact a:hover {
+  background-color: #00a19a;
+  color: #ffffff;
+}
+.profileContent .order .cancel {
+  color: #db1d00;
+}
+.profileContent .order .done {
+  color: #038735;
+}
+.profileContent .order .orderStatus {
+  padding: 10px;
+  font-weight: bold;
+}
+
+.routeNav {
+  display: flex;
+  align-items: center;
+  background-color: rgba(0, 161, 154, 0.1254901961);
+  border-radius: 8px;
+  padding: 10px 30px;
+  margin-bottom: 10px;
+  transition: all 0.3s ease-in-out;
+}
+.routeNav .Back {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: #00a19a;
+  color: #1d71b8;
+  border-radius: 100%;
+  margin-left: 30px;
+  transition: all 0.3s ease-in-out;
+  font-size: 20px;
+  border: none;
+}
+.routeNav .Back:hover {
+  background-color: #292929;
+  color: #ffd700;
+}
+.routeNav .Back .fa-angle-right:before {
+  content: "\f105";
+}
+.routeNav ul {
+  margin: 0;
+  list-style: none;
+  transition: all 0.3s ease-in-out;
+  padding: 0;
+}
+.routeNav ul li {
+  display: inline-flex;
+  padding: 10px;
+  color: #00a19a;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+.routeNav ul li a {
+  transition: all 0.3s ease-in-out;
+  color: #00a19a;
+}
+.routeNav ul li a:hover {
+  color: #ffffff;
+}
+.routeNav ul li a.active {
+  color: #ffffff;
+  cursor: default;
+  font-weight: bold;
+}
+.routeNav ul li::after {
+  content: " / ";
+  font-size: 20px;
+  font-weight: bold;
+  position: absolute;
+  left: -3px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.routeNav ul li:last-child:after {
+  display: none;
+}
+@media (max-width: 768px) {
+  .routeNav {
+    margin: 0px 0px 30px;
+    padding: 10px 10px;
+  }
+  .routeNav .Back {
+    margin-left: 20px;
+  }
+  .routeNav ul li a {
+    font-size: 16px;
+  }
+}
+
+.status {
+  position: relative;
+  padding: 20px 10px;
+  background-color: #00a19a;
+  margin: 20px 0;
+  border-radius: 8px;
+  border: 1px solid #1d71b8;
+  overflow: hidden;
+}
+.status ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+}
+.status ol li {
+  position: relative;
+  text-align: center;
+  padding: 0 5px;
+  width: 100%;
+}
+.status ol li:before {
+  content: "";
+  width: 25px;
+  height: 25px;
+  display: block;
+  border-radius: 50%;
+  background: #fff;
+  margin: 0 auto 4px auto;
+  border: 3px solid #ccc;
+}
+.status ol li:not(:last-child)::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  display: block;
+  background: #ccc;
+  margin: 0;
+  position: absolute;
+  top: 12px;
+  right: calc(50% + 12px);
+}
+.status ol li.completed:before {
+  background: #1d71b8;
+  border: 3px solid #1d71b8;
+}
+.status ol p {
+  margin-top: 10px;
+}
+
+.notifications {
+  padding: 10px;
+}
+.notifications ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.notifications ul .notification {
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1254901961);
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+.notifications ul .notification .notificationTitle {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.notifications ul .notification p {
+  color: #808080;
+  margin-bottom: 10px;
+}
+.notifications ul .notification .date {
+  display: flex;
+  font-size: small;
+}
+.notifications ul .notification .date i {
+  color: #1d71b8;
+}
+
+.editProfile {
+  padding: 20px;
+  background-color: #ffffff;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1254901961);
+}
+.editProfile .head {
+  background-color: #00a19a;
+  color: #1d71b8;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 10px;
+}
+.editProfile .head h5 {
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 /* PC device :991px. */
