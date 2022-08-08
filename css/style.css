@@ -2227,7 +2227,7 @@ span.select2.select2-container.select2-container--default {
 .profile .userHeader {
   margin: 20px 0px;
   background-color: #ffffff;
-  color: #1d71b8;
+  color: #292929;
   border-radius: 20px;
   box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1254901961);
   padding: 20px;
@@ -2325,8 +2325,8 @@ span.select2.select2-container.select2-container--default {
   }
 }
 .profile .profileNavCol {
-  background-color: rgba(0, 161, 154, 0.1254901961);
-  border-radius: 8px;
+  background-color: rgba(0, 161, 154, 0.062745098);
+  border-radius: 16px;
   padding: 5px;
   margin-bottom: 50px;
   position: -webkit-sticky;
@@ -2339,10 +2339,10 @@ span.select2.select2-container.select2-container--default {
   padding: 13px;
   display: flex;
   align-items: center;
-  color: #00a19a;
+  color: #292929;
   margin: 5px 1px;
   transition: all 0.3s ease-in-out;
-  border-radius: 4px;
+  border-radius: 8px;
 }
 .profile .profileNavCol a i {
   margin-right: 5px;
@@ -2465,9 +2465,9 @@ span.select2.select2-container.select2-container--default {
   align-items: center;
 }
 .profileContent .order .profileCustomerInfo .info img {
-  height: 40px;
-  width: 40px;
-  margin-left: 20px;
+  height: 50px;
+  width: 50px;
+  margin-left: 10px;
   -o-object-fit: contain;
      object-fit: contain;
 }
@@ -2513,7 +2513,7 @@ span.select2.select2-container.select2-container--default {
 .routeNav {
   display: flex;
   align-items: center;
-  background-color: rgba(0, 161, 154, 0.1254901961);
+  background-color: #1d71b8;
   border-radius: 8px;
   padding: 10px 30px;
   margin-bottom: 10px;
@@ -2526,7 +2526,7 @@ span.select2.select2-container.select2-container--default {
   align-items: center;
   width: 40px;
   height: 40px;
-  background-color: #00a19a;
+  background-color: #ffffff;
   color: #1d71b8;
   border-radius: 100%;
   margin-left: 30px;
@@ -2550,7 +2550,7 @@ span.select2.select2-container.select2-container--default {
 .routeNav ul li {
   display: inline-flex;
   padding: 10px;
-  color: #00a19a;
+  color: #ffffff;
   transition: all 0.3s ease-in-out;
   position: relative;
 }
@@ -2652,8 +2652,7 @@ span.select2.select2-container.select2-container--default {
 }
 .notifications ul .notification {
   padding: 20px;
-  background-color: #ffffff;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1254901961);
+  background-color: rgba(0, 161, 154, 0.062745098);
   border-radius: 10px;
   margin-bottom: 10px;
 }
@@ -2681,7 +2680,7 @@ span.select2.select2-container.select2-container--default {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1254901961);
 }
 .editProfile .head {
-  background-color: #00a19a;
+  background-color: rgba(29, 113, 184, 0.062745098);
   color: #1d71b8;
   margin-bottom: 20px;
   padding: 20px;

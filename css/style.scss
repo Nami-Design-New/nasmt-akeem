@@ -2127,7 +2127,7 @@ span.select2.select2-container.select2-container--default {
   .userHeader {
     margin: 20px 0px;
     background-color: $white-color;
-    color: $mainColor;
+    color: $black-color;
     border-radius: 20px;
     box-shadow: $BigShadow;
     padding: 20px;
@@ -2240,8 +2240,8 @@ span.select2.select2-container.select2-container--default {
   }
 
   .profileNavCol {
-    background-color: #00a19a20;
-    border-radius: 8px;
+    background-color: #00a19a10;
+    border-radius: 16px;
     padding: 5px;
     // border: 1px solid #ccc;
     margin-bottom: 50px;
@@ -2254,10 +2254,10 @@ span.select2.select2-container.select2-container--default {
       padding: 13px;
       display: flex;
       align-items: center;
-      color: $secondColor;
+      color: $black-color;
       margin: 5px 1px;
       transition: $transition;
-      border-radius: 4px;
+      border-radius: 8px;
       // border: 1px solid $secondColor;
 
       i {
@@ -2399,9 +2399,9 @@ span.select2.select2-container.select2-container--default {
         align-items: center;
 
         img {
-          height: 40px;
-          width: 40px;
-          margin-left:  20px;
+          height: 50px;
+          width: 50px;
+          margin-left:  10px;
           object-fit: contain;
         }
 
@@ -2461,7 +2461,7 @@ span.select2.select2-container.select2-container--default {
 .routeNav {
   display: flex;
   align-items: center;
-  background-color: #00a19a20;
+  background-color: $mainColor;
   border-radius: 8px;
   padding: 10px 30px;
   margin-bottom: 10px;
@@ -2474,7 +2474,7 @@ span.select2.select2-container.select2-container--default {
     align-items: center;
     width: 40px;
     height: 40px;
-    background-color: $secondColor;
+    background-color: $white-color;
     color: $mainColor;
     border-radius: 100%;
     margin-left: 30px;
@@ -2501,7 +2501,7 @@ span.select2.select2-container.select2-container--default {
     li {
       display: inline-flex;
       padding: 10px;
-      color: $secondColor;
+      color: $white-color;
       transition: $transition;
       position: relative;
 
@@ -2627,8 +2627,7 @@ span.select2.select2-container.select2-container--default {
 
     .notification {
       padding: 20px;
-      background-color: $white-color;
-      box-shadow: $shadow;
+      background-color: #00a19a10;
       border-radius: 10px;
       margin-bottom: 10px;
 
@@ -2662,7 +2661,7 @@ span.select2.select2-container.select2-container--default {
   box-shadow: $shadow;
 
   .head {
-    background-color: $secondColor;
+    background-color: #1d71b810;
     color: $mainColor;
     margin-bottom: 20px;
     padding: 20px;
