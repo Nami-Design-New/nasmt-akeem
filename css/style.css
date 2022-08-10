@@ -329,6 +329,18 @@ span.select2.select2-container.select2-container--default {
   }
 }
 
+.btn-success {
+  background-color: #00a19a;
+}
+
+.btn-outline-success {
+  border-color: #00a19a;
+}
+
+.btn {
+  border-radius: 16px;
+}
+
 .navbar {
   background: #ffffff;
   border-top: 1px solid rgba(255, 255, 255, 0.2);
@@ -392,6 +404,11 @@ span.select2.select2-container.select2-container--default {
   right: 0px;
   opacity: 1;
   visibility: visible;
+}
+.navbar .btn {
+  border-radius: 16px;
+  padding: 8px 24px !important;
+  transition: all 0.3s ease-in-out !important;
 }
 .navbar .sideBtn {
   position: relative;
@@ -472,6 +489,7 @@ span.select2.select2-container.select2-container--default {
   display: block;
   font-size: 14px;
   line-height: 26px;
+  margin-bottom: 5px;
   color: #fff;
   padding: 5px 0;
   transition: padding 0.3s;
@@ -687,27 +705,34 @@ span.select2.select2-container.select2-container--default {
   position: relative;
   z-index: 2;
 }
-.footer .logo {
+.footer .info {
+  display: flex;
+  align-items: center;
+}
+.footer .info .logo {
   height: 80px;
-  width: 100%;
+  width: 160px;
   -o-object-fit: contain;
      object-fit: contain;
   margin-bottom: 10px;
   -o-object-position: right;
      object-position: right;
 }
-.footer .info {
+.footer .info p {
   color: #666276;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   padding-left: 20px;
   font-size: 14px;
   line-height: 30px;
+}
+.footer .info .data {
+  padding: 20px 10px 10px;
 }
 .footer .head {
   font-weight: bold;
   text-transform: uppercase;
   color: #1f1b2d;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
   padding-bottom: 20px;
   position: relative;
 }
@@ -737,13 +762,8 @@ span.select2.select2-container.select2-container--default {
 }
 .footer .Links ul li {
   margin-bottom: 5px;
-  display: block;
-  padding: 5px;
-}
-@media (max-width: 578px) {
-  .footer .Links ul li {
-    display: inline-block;
-  }
+  padding: 5px 10px;
+  display: inline-block;
 }
 .footer .Links ul li a {
   color: #454056;
@@ -2022,7 +2042,11 @@ span.select2.select2-container.select2-container--default {
 }
 
 .selectCustomerService {
-  padding: 70px 0;
+  padding: 30px 0 0;
+}
+.selectCustomerService .hint {
+  text-align: center;
+  margin-bottom: 16px;
 }
 .selectCustomerService .headTitle h2 {
   font-size: 30px !important;
@@ -2038,14 +2062,14 @@ span.select2.select2-container.select2-container--default {
 .selectCustomerService .choose {
   position: relative;
   background-color: rgba(0, 161, 154, 0.1254901961);
-  padding: 20px;
+  padding: 16px;
   border-radius: 16px;
 }
 .selectCustomerService .choose .customerOption {
   padding: 5px;
 }
 .selectCustomerService .choose .btn {
-  padding: 15px 20px;
+  padding: 8px 16px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1254901961);
   box-shadow: none;
   background-color: #ffffff;
@@ -2054,18 +2078,19 @@ span.select2.select2-container.select2-container--default {
   height: 100%;
   position: relative;
   transition: all 0.3s ease-in-out;
-  border: 4px solid transparent;
+  border: 2px solid transparent;
   border-radius: 16px;
 }
 .selectCustomerService .choose .btn img {
-  height: 80px;
-  min-width: 80px;
+  height: 50px;
+  min-width: 50px;
   margin: 0 auto 20px;
   -o-object-fit: contain;
      object-fit: contain;
 }
 .selectCustomerService .choose .btn span {
   text-transform: capitalize;
+  font-size: 13px !important;
 }
 .selectCustomerService .choose .btn-check:active + .btn-outline,
 .selectCustomerService .choose .btn-check:checked + .btn-outline,
@@ -2074,7 +2099,7 @@ span.select2.select2-container.select2-container--default {
 .selectCustomerService .choose .btn-outline:active {
   background-color: #ffffff;
   color: #00a19a;
-  border: 4px solid #00a19a;
+  border: 2px solid #00a19a;
 }
 .selectCustomerService .choose .btn-check:active + .btn-outline::after,
 .selectCustomerService .choose .btn-check:checked + .btn-outline::after,
@@ -2224,25 +2249,17 @@ span.select2.select2-container.select2-container--default {
   height: 120px;
   margin-bottom: 50px;
 }
-.profile .userHeader {
-  margin: 20px 0px;
+.profile .userInfo {
   background-color: #ffffff;
   color: #292929;
   border-radius: 20px;
   box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1254901961);
   padding: 20px;
   position: relative;
+  text-align: center;
+  margin: 20px 0;
 }
-@media (max-width: 768px) {
-  .profile .userHeader {
-    padding: 10px;
-  }
-}
-.profile .userHeader .userInfo {
-  position: relative;
-  margin: 0px 10px;
-}
-.profile .userHeader .userInfo img {
+.profile .userInfo img {
   width: 100px;
   height: 100px;
   -o-object-fit: cover;
@@ -2251,33 +2268,34 @@ span.select2.select2-container.select2-container--default {
      object-position: top;
   border-radius: 100%;
   border: 3px solid #00a19a;
+  margin-bottom: 20px;
 }
-.profile .userHeader .userInfo .userName h3 {
+.profile .userInfo .userName h3 {
   font-weight: bold;
   margin-bottom: 10px;
 }
-.profile .userHeader .userInfo .control {
+.profile .userInfo .control {
   position: absolute;
   left: 0;
   top: 5px;
 }
-.profile .userHeader .userInfo .control i {
+.profile .userInfo .control i {
   font-size: 28px;
   color: #ff0000;
   cursor: pointer;
 }
-.profile .userHeader .userInfo .control .switch {
+.profile .userInfo .control .switch {
   position: relative;
   width: 50px;
   height: 28px;
   margin: -3px 10px;
 }
-.profile .userHeader .userInfo .control .switch input {
+.profile .userInfo .control .switch input {
   opacity: 0;
   width: 0;
   height: 0;
 }
-.profile .userHeader .userInfo .control .switch .slider {
+.profile .userInfo .control .switch .slider {
   position: absolute;
   cursor: pointer;
   top: 0;
@@ -2289,7 +2307,7 @@ span.select2.select2-container.select2-container--default {
   border-radius: 34px;
   margin: 0px !important;
 }
-.profile .userHeader .userInfo .control .switch .slider:before {
+.profile .userInfo .control .switch .slider:before {
   position: absolute;
   content: "";
   height: 20px;
@@ -2300,27 +2318,24 @@ span.select2.select2-container.select2-container--default {
   transition: 0.4s;
   border-radius: 50%;
 }
-.profile .userHeader .userInfo .control .switch input:checked + .slider {
+.profile .userInfo .control .switch input:checked + .slider {
   background-color: #2196f3;
 }
-.profile .userHeader .userInfo .control .switch input:focus + .slider {
+.profile .userInfo .control .switch input:focus + .slider {
   box-shadow: 0 0 1px #2196f3;
 }
-.profile .userHeader .userInfo .control .switch input:checked + .slider:before {
+.profile .userInfo .control .switch input:checked + .slider:before {
   transform: translateX(22px);
 }
 @media (max-width: 760px) {
-  .profile .userHeader .container {
-    padding: 0px !important;
-  }
-  .profile .userHeader .userInfo {
+  .profile .userInfo {
     padding: 20px 10px;
   }
-  .profile .userHeader .userInfo img {
+  .profile .userInfo img {
     width: 80px;
     height: 80px;
   }
-  .profile .userHeader .userInfo span {
+  .profile .userInfo span {
     margin: 0px 10px;
   }
 }
@@ -2380,6 +2395,26 @@ span.select2.select2-container.select2-container--default {
   margin-bottom: 20px;
 }
 
+.profileContent {
+  background-color: #ffffff;
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1254901961);
+  border-radius: 16px;
+  padding: 20px;
+  margin: 10px;
+}
+@media (max-width: 760px) {
+  .profileContent {
+    box-shadow: none;
+    margin: 20px 0;
+    padding: 0;
+  }
+}
+.profileContent .customAlert {
+  font-weight: bold;
+  color: #1d71b8;
+  text-align: center;
+  padding: 10px;
+}
 .profileContent .newOrder {
   width: 100%;
   padding: 20px;
@@ -2677,7 +2712,7 @@ span.select2.select2-container.select2-container--default {
   background-color: #ffffff;
   margin-bottom: 20px;
   border-radius: 10px;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1254901961);
+  border: 1px solid #eee;
 }
 .editProfile .head {
   background-color: rgba(29, 113, 184, 0.062745098);

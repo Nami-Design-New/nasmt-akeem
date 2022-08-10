@@ -302,6 +302,16 @@ span.select2.select2-container.select2-container--default {
     }
   }
 }
+.btn-success {
+  background-color: $secondColor;
+}
+.btn-outline-success {
+  border-color: $secondColor;
+  
+}
+.btn{
+  border-radius: 16px;
+}
 .navbar {
   background: #ffffff;
   border-top: 1px solid #ffffff33;
@@ -361,6 +371,11 @@ span.select2.select2-container.select2-container--default {
         visibility: visible;
       }
     }
+  }
+  .btn {
+    border-radius: 16px;
+    padding: 8px 24px !important;
+    transition: $transition !important;
   }
   .sideBtn {
     position: relative;
@@ -441,6 +456,7 @@ span.select2.select2-container.select2-container--default {
         display: block;
         font-size: 14px;
         line-height: 26px;
+        margin-bottom: 5px;
         color: #fff;
         padding: 5px 0;
         transition: padding 0.3s;
@@ -642,25 +658,34 @@ span.select2.select2-container.select2-container--default {
   padding: 20px 0;
   position: relative;
   z-index: 2;
-  .logo {
-    height: 80px;
-    width: 100%;
-    object-fit: contain;
-    margin-bottom: 10px;
-    object-position: right;
-  }
+
   .info {
-    color: #666276;
-    margin-bottom: 20px;
-    padding-left: 20px;
-    font-size: 14px;
-    line-height: 30px;
+    display: flex;
+    align-items: center;
+
+    .logo {
+      height: 80px;
+      width: 160px;
+      object-fit: contain;
+      margin-bottom: 10px;
+      object-position: right;
+    }
+    p {
+      color: #666276;
+      margin-bottom: 10px;
+      padding-left: 20px;
+      font-size: 14px;
+      line-height: 30px;
+    }
+    .data {
+      padding: 20px 10px 10px;
+    }
   }
   .head {
     font-weight: bold;
     text-transform: uppercase;
     color: #1f1b2d;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
     padding-bottom: 20px;
     position: relative;
     &::after {
@@ -691,12 +716,11 @@ span.select2.select2-container.select2-container--default {
       margin: 0;
       li {
         margin-bottom: 5px;
-        display: block;
+        // display: block;
         // min-width: 49%;
-        padding: 5px;
-        @media (max-width: 578px) {
-          display: inline-block;
-        }
+        padding: 5px 10px;
+        display: inline-block;
+
         a {
           color: #454056;
           &:hover {
@@ -1919,7 +1943,12 @@ span.select2.select2-container.select2-container--default {
   }
 }
 .selectCustomerService {
-  padding: 70px 0;
+  padding: 30px 0 0;
+  .hint{
+    text-align: center;
+    // color:  #777;
+    margin-bottom: 16px;
+  }
   .headTitle {
     h2 {
       font-size: 30px !important;
@@ -1934,14 +1963,14 @@ span.select2.select2-container.select2-container--default {
   .choose {
     position: relative;
     background-color: #00a19a20;
-    padding: 20px;
+    padding: 16px;
     border-radius: 16px;
     .customerOption {
       // margin: 5px;
       padding: 5px;
     }
     .btn {
-      padding: 15px 20px;
+      padding: 8px 16px;
       // border: 1px solid #d2d6da;
       box-shadow: $shadow;
       box-shadow: none;
@@ -1951,16 +1980,17 @@ span.select2.select2-container.select2-container--default {
       height: 100%;
       position: relative;
       transition: $transition;
-      border: 4px solid transparent;
+      border: 2px solid transparent;
       border-radius: 16px;
       img {
-        height: 80px;
-        min-width: 80px;
+        height: 50px;
+        min-width: 50px;
         margin: 0 auto 20px;
         object-fit: contain;
       }
       span {
         text-transform: capitalize;
+        font-size: 13px !important;
       }
     }
     .btn-check:active + .btn-outline,
@@ -1970,7 +2000,7 @@ span.select2.select2-container.select2-container--default {
     .btn-outline:active {
       background-color: $white-color;
       color: $secondColor;
-      border: 4px solid $secondColor;
+      border: 2px solid $secondColor;
       &::after {
         content: "\f336" !important;
         font-family: "Font Awesome 6 Pro";
@@ -2099,7 +2129,6 @@ span.select2.select2-container.select2-container--default {
   padding: 20px 0px;
   display: flex;
   justify-content: space-around;
-
   .vCode-input {
     min-width: 40px;
     width: 100%;
@@ -2112,7 +2141,6 @@ span.select2.select2-container.select2-container--default {
     border-radius: 4px 4px 0 0;
   }
 }
-
 // profile
 .profile {
   .NavBack {
@@ -2124,121 +2152,94 @@ span.select2.select2-container.select2-container--default {
     margin-bottom: 50px;
   }
 
-  .userHeader {
-    margin: 20px 0px;
+  .userInfo {
     background-color: $white-color;
     color: $black-color;
     border-radius: 20px;
     box-shadow: $BigShadow;
     padding: 20px;
     position: relative;
-    @media (max-width: 768px) {
-      padding: 10px;
+    text-align: center;
+    margin: 20px 0;
+    img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      object-position: top;
+      border-radius: 100%;
+      border: 3px solid $secondColor;
+      margin-bottom: 20px;
     }
-
-    .userInfo {
-      position: relative;
-      margin: 0px 10px;
-
-      img {
-        width: 100px;
-        height: 100px;
-        object-fit: cover;
-        object-position: top;
-        border-radius: 100%;
-        border: 3px solid $secondColor;
+    .userName {
+      h3 {
+        font-weight: bold;
+        margin-bottom: 10px;
       }
-
-      .userName {
-        h3 {
-          font-weight: bold;
-          margin-bottom: 10px;
+    }
+    .control {
+      position: absolute;
+      left: 0;
+      top: 5px;
+      i {
+        font-size: 28px;
+        color: #ff0000;
+        cursor: pointer;
+      }
+      .switch {
+        position: relative;
+        width: 50px;
+        height: 28px;
+        margin: -3px 10px;
+        input {
+          opacity: 0;
+          width: 0;
+          height: 0;
         }
-      }
-
-      .control {
-        position: absolute;
-        left: 0;
-        top: 5px;
-
-        i {
-          font-size: 28px;
-          color: #ff0000;
+        .slider {
+          position: absolute;
           cursor: pointer;
-        }
-
-        .switch {
-          position: relative;
-          width: 50px;
-          height: 28px;
-          margin: -3px 10px;
-
-          input {
-            opacity: 0;
-            width: 0;
-            height: 0;
-          }
-
-          .slider {
+          top: 0;
+          right: 0;
+          left: 0;
+          bottom: 0;
+          background-color: #ccc;
+          transition: 0.4s;
+          border-radius: 34px;
+          margin: 0px !important;
+          &:before {
             position: absolute;
-            cursor: pointer;
-            top: 0;
-            right: 0;
-            left: 0;
-            bottom: 0;
-            background-color: #ccc;
+            content: "";
+            height: 20px;
+            width: 20px;
+            right: 4px;
+            bottom: 4px;
+            background-color: white;
             transition: 0.4s;
-            border-radius: 34px;
-            margin: 0px !important;
-
-            &:before {
-              position: absolute;
-              content: "";
-              height: 20px;
-              width: 20px;
-              right: 4px;
-              bottom: 4px;
-              background-color: white;
-              transition: 0.4s;
-              border-radius: 50%;
-            }
+            border-radius: 50%;
           }
-
-          input:checked + .slider {
-            background-color: #2196f3;
-          }
-
-          input:focus + .slider {
-            box-shadow: 0 0 1px #2196f3;
-          }
-
-          input:checked + .slider:before {
-            transform: translateX(22px);
-          }
+        }
+        input:checked + .slider {
+          background-color: #2196f3;
+        }
+        input:focus + .slider {
+          box-shadow: 0 0 1px #2196f3;
+        }
+        input:checked + .slider:before {
+          transform: translateX(22px);
         }
       }
     }
-
     @media (max-width: 760px) {
-      .container {
-        padding: 0px !important;
+      padding: 20px 10px;
+      img {
+        width: 80px;
+        height: 80px;
       }
-
-      .userInfo {
-        padding: 20px 10px;
-
-        img {
-          width: 80px;
-          height: 80px;
-        }
-
-        span {
-          margin: 0px 10px;
-        }
+      span {
+        margin: 0px 10px;
       }
     }
   }
-
   .profileNavCol {
     background-color: #00a19a10;
     border-radius: 16px;
@@ -2249,7 +2250,6 @@ span.select2.select2-container.select2-container--default {
     top: 90px;
     right: 0;
     z-index: 2;
-
     a {
       padding: 13px;
       display: flex;
@@ -2259,21 +2259,17 @@ span.select2.select2-container.select2-container--default {
       transition: $transition;
       border-radius: 8px;
       // border: 1px solid $secondColor;
-
       i {
         margin-right: 5px;
       }
-
       &.active,
       &:hover {
         background-color: $secondColor;
         color: $white-color;
       }
     }
-
     @media (max-width: 760px) {
       margin-bottom: 10px;
-
       a {
         padding: 8px 10px;
         display: inline-flex;
@@ -2283,10 +2279,8 @@ span.select2.select2-container.select2-container--default {
         background-color: #ffffffa4;
       }
     }
-
     @media (max-width: 335px) {
       margin-bottom: 10px;
-
       a {
         padding: 8px 10px;
         display: inline-flex;
@@ -2295,15 +2289,31 @@ span.select2.select2-container.select2-container--default {
       }
     }
   }
-
   .profileTitle {
     background-color: #f8f8f8;
     padding: 10px;
     margin-bottom: 20px;
   }
 }
-
 .profileContent {
+  background-color: $white-color;
+  box-shadow: $BigShadow;
+  border-radius: 16px;
+  padding: 20px;
+  margin: 10px;
+  @media (max-width: 760px) {
+    box-shadow: none;
+    margin: 20px 0;
+    padding: 0;
+  }
+
+  .customAlert{
+    font-weight: bold;
+    color: $mainColor;
+    text-align: center;
+    padding: 10px;
+  }
+
   .newOrder {
     width: 100%;
     padding: 20px;
@@ -2313,27 +2323,21 @@ span.select2.select2-container.select2-container--default {
     border: 1px solid $mainColor;
     background: #1d71b830;
     color: $mainColor;
-
     i {
       font-size: 30px;
       margin-left: 20px;
     }
-
     &:hover {
       background: $mainColor;
       color: $white-color;
     }
   }
-
   .order {
     background-color: #fff;
     border: 1px solid #00a19a20;
     border-radius: 16px;
-
-
     .workerCvSlider {
       padding-bottom: 0px;
-
       img {
         height: 200px;
         object-fit: contain;
@@ -2341,48 +2345,40 @@ span.select2.select2-container.select2-container--default {
         cursor: zoom-in;
       }
     }
-
     .swiper-button-prev,
     .swiper-button-next {
       color: $mainColor;
       width: 30px;
       height: 30px;
-
       &:hover {
         background-color: $secondColor;
         color: $mainColor;
       }
-
       &::after,
       &::before {
         font-weight: 300;
         font-size: 20px;
       }
     }
-
     ul {
       list-style: none;
       padding: 0;
       margin: 0;
-
       li {
         display: inline-flex;
         align-items: center;
         flex-wrap: wrap;
         min-width: 49%;
         padding: 10px;
-
         h6 {
           color: #777;
         }
-
         p {
           font-weight: bold;
           margin-right: 5px;
         }
       }
     }
-
     .profileCustomerInfo {
       display: flex;
       justify-content: space-between;
@@ -2393,34 +2389,28 @@ span.select2.select2-container.select2-container--default {
       background-color: #00a19a20;
       border-radius: 16px;
       margin-top: 10px;
-
       .info {
         display: flex;
         align-items: center;
-
         img {
           height: 50px;
           width: 50px;
-          margin-left:  10px;
+          margin-left: 10px;
           object-fit: contain;
         }
-
         .text {
           h6 {
             font-weight: bold;
             margin-bottom: 10px;
             color: $secondColor;
           }
-
           p {
             font-size: smaller !important;
           }
         }
       }
-
       .contact {
         text-align: center;
-
         a {
           display: inline-flex;
           justify-content: center;
@@ -2430,11 +2420,9 @@ span.select2.select2-container.select2-container--default {
           border: 1px solid $secondColor;
           color: $secondColor;
           margin: 5px;
-
           i {
             font-size: 20px;
           }
-
           &:hover {
             background-color: $secondColor;
             color: $white-color;
@@ -2442,22 +2430,18 @@ span.select2.select2-container.select2-container--default {
         }
       }
     }
-
     .cancel {
       color: #db1d00;
     }
-
     .done {
       color: #038735;
     }
-
     .orderStatus {
       padding: 10px;
       font-weight: bold;
     }
   }
 }
-
 .routeNav {
   display: flex;
   align-items: center;
@@ -2466,7 +2450,6 @@ span.select2.select2-container.select2-container--default {
   padding: 10px 30px;
   margin-bottom: 10px;
   transition: $transition;
-
   .Back {
     position: relative;
     display: flex;
@@ -2481,45 +2464,37 @@ span.select2.select2-container.select2-container--default {
     transition: $transition;
     font-size: 20px;
     border: none;
-
     &:hover {
       background-color: $black-color;
       color: $gold;
     }
-
     .fa-angle-right:before {
       content: "\f105";
     }
   }
-
   ul {
     margin: 0;
     list-style: none;
     transition: $transition;
     padding: 0;
-
     li {
       display: inline-flex;
       padding: 10px;
       color: $white-color;
       transition: $transition;
       position: relative;
-
       a {
         transition: $transition;
         color: $secondColor;
-
         &:hover {
           color: $white-color;
         }
-
         &.active {
           color: $white-color;
           cursor: default;
           font-weight: bold;
         }
       }
-
       &::after {
         content: " / ";
         font-size: 20px;
@@ -2529,21 +2504,17 @@ span.select2.select2-container.select2-container--default {
         top: 50%;
         transform: translateY(-50%);
       }
-
       &:last-child:after {
         display: none;
       }
     }
   }
-
   @media (max-width: 768px) {
     margin: 0px 0px 30px;
     padding: 10px 10px;
-
     .Back {
       margin-left: 20px;
     }
-
     ul {
       li {
         a {
@@ -2553,7 +2524,6 @@ span.select2.select2-container.select2-container--default {
     }
   }
 }
-
 .status {
   position: relative;
   padding: 20px 10px;
@@ -2562,20 +2532,17 @@ span.select2.select2-container.select2-container--default {
   border-radius: 8px;
   border: 1px solid $mainColor;
   overflow: hidden;
-
   ol {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
     justify-content: space-between;
-
     li {
       position: relative;
       text-align: center;
       padding: 0 5px;
       width: 100%;
-
       &:before {
         content: "";
         width: 25px;
@@ -2586,7 +2553,6 @@ span.select2.select2-container.select2-container--default {
         margin: 0 auto 4px auto;
         border: 3px solid #ccc;
       }
-
       &:not(:last-child)::after {
         content: "";
         width: 100%;
@@ -2598,53 +2564,43 @@ span.select2.select2-container.select2-container--default {
         top: 12px;
         right: calc(50% + 12px);
       }
-
       &.completed {
         &:before {
           background: $mainColor;
           border: 3px solid $mainColor;
         }
-
         // &:not(:last-child)::after {
         //   background-color: $mainColor;
         // }
       }
     }
-
     p {
       margin-top: 10px;
     }
   }
 }
-
 .notifications {
   padding: 10px;
-
   ul {
     padding: 0;
     margin: 0;
     list-style: none;
-
     .notification {
       padding: 20px;
       background-color: #00a19a10;
       border-radius: 10px;
       margin-bottom: 10px;
-
       .notificationTitle {
         font-weight: bold;
         margin-bottom: 10px;
       }
-
       p {
         color: #808080;
         margin-bottom: 10px;
       }
-
       .date {
         display: flex;
         font-size: small;
-
         i {
           color: $mainColor;
         }
@@ -2652,28 +2608,25 @@ span.select2.select2-container.select2-container--default {
     }
   }
 }
-
 .editProfile {
   padding: 20px;
   background-color: $white-color;
   margin-bottom: 20px;
   border-radius: 10px;
-  box-shadow: $shadow;
-
+  // box-shadow: $shadow;
+  border: 1px solid #eee;
   .head {
     background-color: #1d71b810;
     color: $mainColor;
     margin-bottom: 20px;
     padding: 20px;
     border-radius: 10px;
-
     h5 {
       font-weight: bold;
       text-transform: uppercase;
     }
   }
 }
-
 // //////////////////////////////////////////==================
 // //////////////////////////////////////////==================
 // //////////////////////////////////////////==================
